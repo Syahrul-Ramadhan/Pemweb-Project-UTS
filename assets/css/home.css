@@ -1,0 +1,75 @@
+/* ---------- CAROUSEL START---------- */
+.carousel-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.carousel .slide {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.slide.active {
+  justify-content: center;
+}
+
+.slide img {
+  border-radius: 12px;
+}
+
+.carousel-container .prev-btn,
+.carousel-container .next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(221, 221, 221, 0.8);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  z-index: 10;
+}
+
+.carousel-container .prev-btn:hover,
+.carousel-container .next-btn:hover {
+  background-color: rgba(221, 221, 221, 1);
+}
+
+.prev-btn {
+  left: 24px;
+}
+
+.next-btn {
+  right: 24px;
+}
+
+/* ---------- CAROUSEL END---------- */
+
+/* ---------- RESPONSIVE ---------- */
+@media (min-width: 640) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1080px) {
+}
+@media (min-width: 1280px) {
+}
