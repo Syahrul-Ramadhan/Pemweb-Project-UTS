@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Luarkampus</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">LUARKAMPUS</div>
+        
+        <nav class="nav-links">
+            <a href="#" class="nav-item">Beasiswa</a>
+            <a href="#" class="nav-item">Lomba</a>
+            <a href="#" class="nav-item">Cari Tim</a>
+            <a href="#" class="nav-item">Forum</a>
+        </nav>
+
+        <div class="search-auth">
+            <div class="search-container">
+                <input type="text" placeholder="Ketik nama beasiswa/lomba yang ingin kamu cari" class="search-input">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="auth-buttons">
+                <button class="btn btn-login">MASUK</button>
+                <button class="btn btn-register">DAFTAR</button>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="registration-container">
+            <div class="form-section">
+                <div class="form-header">
+                    <h1>Selamat Datang Kembali!</h1>
+                    <p>Selamat datang kembali di Luarkampus! Yuk masuk ke akun kamu agar bisa menggunakan fitur lengkap kami dan mendapatkan update informasi terbaru.</p>
+                </div>
+                
+                <form id="login-form" class="register-form">
+                    <div class="input-fields">
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Masukkan email" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <div class="password-container">
+                                <input type="password" id="password" placeholder="Masukkan password" required>
+                                <i class="fas fa-eye-slash toggle-password"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <div class="terms-checkbox">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Ingat saya</label>
+                        </div>
+                        <a href="#" class="forgot-password">Lupa password?</a>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="register-btn">MASUK</button>
+                        <div class="divider">
+                            <span>atau</span>
+                        </div>
+                        <button type="button" class="google-btn">
+                            <img src="../assets/images/google-icon.png" alt="Google">
+                            <span>MASUK DENGAN GOOGLE</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="login-link">
+                    <span>Belum punya akun?</span>
+                    <a href="register.html">Daftar di sini</a>
+                </div>
+            </div>
+            <div class="image-section">
+                <div class="image-content">
+                    <h2>Akses Semua Fitur Luarkampus</h2>
+                    <p>Dapatkan informasi terbaru tentang beasiswa, lomba, dan temukan kolaborator untuk proyekmu.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3 class="section-title">TENTANG</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Tentang Kami</a>
+                        <a href="#" class="footer-link">FAQ</a>
+                        <a href="#" class="footer-link">Kebijakan Privasi</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="section-title">LAINNYA</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Beasiswa</a>
+                        <a href="#" class="footer-link">Lomba</a>
+                        <a href="#" class="footer-link">Cari Tim</a>
+                        <a href="#" class="footer-link">Forum</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="section-title">IKUTI KAMI</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="section-title">HUBUNGI KAMI</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@luarkampus.id</p>
+                        <p><i class="fas fa-phone"></i> +62 812 3456 7890</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2025 Luarkampus. All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
