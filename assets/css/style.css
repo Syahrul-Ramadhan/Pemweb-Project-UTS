@@ -325,6 +325,61 @@ ul {
 
 /* ---------- NAVBAR STYLE END ---------- */
 
+/* ---------- FOOTER START---------- */
+footer {
+  background-color: #13344d;
+  padding: 42px 60px 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 32px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-container h3 {
+  color: #8cadc6;
+  margin-bottom: 8px;
+}
+.footer-container a {
+  color: white;
+}
+
+.footer-container a:hover {
+  color: var(--Primary-color);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-items {
+  display: flex;
+  gap: 24px;
+}
+
+.social-items {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+footer p {
+  color: #d6d6d6;
+}
+/* ---------- FOOTER END---------- */
+
 /* ---------- RESPONSIVE ---------- */
 @media (min-width: 640) {
 }

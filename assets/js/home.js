@@ -1,43 +1,64 @@
-// CAROUSEL
+// CAROUSEL BANNER
 const slides = document.querySelectorAll(".slide");
 const carousel = document.querySelector(".carousel");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 
-let currentIndex = 0;
+let currentIndex = 1;
+const totalSlides = slides.length;
 
-// Add active class to current slide
-if (index === currentIndex) {
-  slide.classList.add("active");
-} else {
-  slide.classList.remove("active");
+// Menampilkan slide berdasarkan indeks
+function updateCarousel() {
+  const offset = -currentIndex * 50; // Menggeser slide
+  carousel.style.transform = `translateX(${offset}%)`;
+  carousel.style.transition = "transform 0.5s ease-in-out";
 }
 
-function goToSlide(index) {
-  if (index >= totalSlides) index = 0;
-  if (index < 0) index = totalSlides - 1;
-
-  currentIndex = index;
-
-  // Update the position of all slides based on the current index
-  slides.forEach((slide, i) => {
-    slide.style.transform = `translateX(${100 * (i - currentIndex)}%)`;
-
-    // Update active state
-    if (i === currentIndex) {
-      slide.classList.add("active");
-    } else {
-      slide.classList.remove("active");
-    }
-  });
-}
-
-// Next button click event
+// Tombol Next
 nextBtn.addEventListener("click", () => {
-  goToSlide(currentIndex + 1);
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateCarousel();
 });
 
-// Previous button click event
+// Tombol Prev
 prevBtn.addEventListener("click", () => {
-  goToSlide(currentIndex - 1);
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateCarousel();
+});
+
+// Inisialisasi
+updateCarousel();
+
+// CAROUSEL BEASISWA
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselBeasiswa = document.querySelector(".carousel-beasiswa");
+  const leftBtn = document.querySelector(".prev-btn-beasiswa");
+  const rightBtn = document.querySelector(".next-btn-beasiswa");
+
+  const scrollAmount = 300;
+
+  rightBtn.addEventListener("click", function () {
+    carouselBeasiswa.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+
+  leftBtn.addEventListener("click", function () {
+    carouselBeasiswa.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+});
+
+// CAROUSEL LOMBA
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselLomba = document.querySelector(".carousel-lomba");
+  const leftBtn = document.querySelector(".prev-btn-lomba");
+  const rightBtn = document.querySelector(".next-btn-lomba");
+
+  const scrollAmount = 300;
+
+  rightBtn.addEventListener("click", function () {
+    carouselLomba.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+
+  leftBtn.addEventListener("click", function () {
+    carouselLomba.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
 });
