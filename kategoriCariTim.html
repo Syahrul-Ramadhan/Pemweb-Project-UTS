@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaPres Forum</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styleKategori.css">
+  </head>
+  <body>
+    <section class="hero-section-cariTim">
+        <div class="hero-content">
+            <h2 class="hero-title">Cari Tim</h2>
+            <p class="hero-description">Butuh tim untuk proyek, hackathon, atau startup? Posting di sini
+                dan temukan rekan yang tepat!</p>
+        </div>
+    </section>
+    
+    <h3 class="forum-guide">Cara Menggunakan Forum</h3>
+    
+    <main class="forum-container">
+        <div class="forum-header">
+            <h4 class="forum-header-topic">Topik</h4>
+            <div class="forum-header-meta">
+                <span class="forum-header-answers">Jawaban</span>
+                <span class="forum-header-updated">Diperbarui</span>
+            </div>
+        </div>
+        <section id="forumSection"></section>
+    </main>
+    
+    <div class="pagination-container">
+        <div class="pagination-info">
+            <span>Menampilkan</span>
+            <span id="startIndex" class="pagination-bold">1</span>
+            <span>sampai</span>
+            <span id="endIndex" class="pagination-bold">10</span>
+            <span>dari</span>
+            <span class="pagination-bold">100</span>
+        </div>
+        <div class="pagination-controls" id="pagination"></div>
+    </div>
+
+    <script>
+        // Jumlah total topik yang tersedia dalam forum
+        const totalTopics = 100;
+
+        // Jumlah topik yang ditampilkan per halaman
+        const topicsPerPage = 10;
+
+        // Halaman yang sedang aktif
+        let currentPage = 1;
+
+        // Fungsi untuk menampilkan daftar topik berdasarkan halaman saat ini
+        function generateTopics() {
+            // Mengambil elemen HTML tempat daftar topik akan ditampilkan
+            const forumSection = document.getElementById("forumSection");
+            forumSection.innerHTML = ""; // Menghapus konten lama sebelum diperbarui
+
+            // Menentukan indeks awal dan akhir topik untuk halaman saat ini
+            const start = (currentPage - 1) * topicsPerPage;
+            const end = start + topicsPerPage;
+
+            // Loop untuk membuat elemen topik sesuai dengan halaman saat ini
+            for (let i = start + 1; i <= end && i <= totalTopics; i++) {
+                const article = document.createElement("article");
+                article.classList.add("forum-topic");
+                article.innerHTML = `
+                <a href="detailForumCariTim.html?topik=${i}" class="topic-link">
+                    <h5 class="topic-title">Topik ${i}: Butuh tim untuk hackathon AI, siapa tertarik?</h5>
+                </a>
+                    <div class="topic-meta">
+                        <span class="topic-answers">${(i % 10) + 1}</span>
+                        <span class="topic-updated">${10 + (i % 10)} Mar '25</span>
+                    </div>
+                `;
+
+                // Menambahkan elemen artikel ke dalam forumSection
+                forumSection.appendChild(article);
+            }
+
+            // Memperbarui indeks tampilan (misalnya "Menampilkan 1 - 10 dari 100")
+            document.getElementById("startIndex").textContent = start + 1;
+            document.getElementById("endIndex").textContent = Math.min(end, totalTopics);
+        }
+
+        // Fungsi untuk membuat navigasi halaman (pagination)
+        function generatePagination() {
+            // Mengambil elemen pagination di HTML
+            const pagination = document.getElementById("pagination");
+            pagination.innerHTML = ""; // Menghapus navigasi lama sebelum diperbarui
+
+            // Membuat tombol "Previous" untuk kembali ke halaman sebelumnya
+            const prevBtn = document.createElement("div");
+            prevBtn.innerHTML = `
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="pagination-prev ${currentPage === 1 ? 'disable' : ''}">
+                    <path d="M1 13C1 6.37258 6.37258 1 13 1H51V51H13C6.37258 51 1 45.6274 1 39V13Z" stroke="#777776"></path>
+                    <path d="M29 20C29 20 23 24.4189 23 26C23 27.5812 29 32 29 32" stroke="#333332" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>`;
+            // Menambahkan event klik untuk kembali ke halaman sebelumnya jika memungkinkan
+            prevBtn.onclick = () => { 
+                if (currentPage > 1) { 
+                    currentPage--; 
+                    update(); 
+                } 
+            };
+            pagination.appendChild(prevBtn);
+
+            // Membuat tombol angka untuk setiap halaman
+            for (let i = 1; i <= Math.ceil(totalTopics / topicsPerPage); i++) {
+                const btn = document.createElement("div");
+                btn.textContent = i;
+                btn.classList.add("pagination-number");
+                if (i === currentPage) btn.classList.add("active"); // Menandai halaman yang sedang aktif
+                btn.onclick = () => { 
+                    currentPage = i; 
+                    update(); 
+                };
+                pagination.appendChild(btn);
+            }
+
+            // Membuat tombol "Next" untuk berpindah ke halaman berikutnya
+            const nextBtn = document.createElement("div");
+            nextBtn.innerHTML = `
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="pagination-next">
+                    <path d="M1 1H39C45.6274 1 51 6.37258 51 13V39C51 45.6274 45.6274 51 39 51H1V1Z" stroke="#777776"></path>
+                    <path d="M23 20C23 20 29 24.4189 29 26C29 27.5812 23 32 23 32" stroke="#333332" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>`;
+            // Menambahkan event klik untuk berpindah ke halaman berikutnya jika memungkinkan
+            nextBtn.onclick = () => { 
+                if (currentPage < Math.ceil(totalTopics / topicsPerPage)) { 
+                    currentPage++; 
+                    update(); 
+                } 
+            };
+            pagination.appendChild(nextBtn);
+        }
+
+        // Fungsi untuk memperbarui tampilan halaman, memanggil fungsi generateTopics dan generatePagination
+        function update() {
+            generateTopics(); // Memperbarui daftar topik
+            generatePagination(); // Memperbarui navigasi halaman
+        }
+
+        // Memanggil fungsi update() saat pertama kali halaman dimuat
+        update();
+    </script>
+</body>
+</html>
