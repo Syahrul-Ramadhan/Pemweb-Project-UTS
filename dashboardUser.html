@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard User Page - SaPres</title>
+    <link rel="stylesheet" href="dashboard-user-page.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        /* Base Styles */
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family:
+            Poppins,
+            -apple-system,
+            Roboto,
+            Helvetica,
+            sans-serif;
+        }
+
+        ul {
+        list-style: none;
+        }
+
+        a {
+        text-decoration: none;
+        color: inherit;
+        }
+
+        /* Dashboard User Page */
+        .dashboard-user-page {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: stretch;
+        }
+
+        /* Header */
+        .main-header {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        width: 100%;
+        padding: 24px 64px;
+        align-items: center;
+        gap: 40px 100px;
+        font-family:
+            Poppins,
+            -apple-system,
+            Roboto,
+            Helvetica,
+            sans-serif;
+        font-weight: 400;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        }
+
+        .logo {
+        color: rgba(0, 0, 0, 1);
+        font-size: 24px;
+        font-weight: 700;
+        align-self: stretch;
+        margin-top: auto;
+        margin-bottom: auto;
+        }
+
+        .main-nav {
+        align-self: stretch;
+        min-width: 240px;
+        margin-top: auto;
+        margin-bottom: auto;
+        }
+
+        .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        font-size: 20px;
+        color: rgba(51, 51, 50, 1);
+        justify-content: center;
+        }
+
+        .search-container {
+        align-self: stretch;
+        display: flex;
+        min-width: 240px;
+        margin-top: auto;
+        margin-bottom: auto;
+        align-items: center;
+        gap: 40px;
+        font-size: 16px;
+        color: rgba(119, 119, 118, 1);
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+
+        .search-input {
+        align-self: stretch;
+        border-radius: 12px;
+        background-color: rgba(217, 217, 217, 1);
+        border-color: rgba(119, 119, 118, 1);
+        border-style: solid;
+        border-width: 1px;
+        min-width: 240px;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 10px 16px;
+        gap: 12px;
+        width: 500px;
+        font-family: inherit;
+        color: inherit;
+        }
+
+        .search-input::placeholder {
+        color: rgba(119, 119, 118, 1);
+        }
+
+        .profile-image {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 45px;
+        border-radius: 50px;
+        align-self: stretch;
+        margin-top: auto;
+        margin-bottom: auto;
+        flex-shrink: 0;
+        }
+
+        /* User Profile Section */
+        .user-profile-section {
+        background-color: rgba(32, 87, 129, 1);
+        display: flex;
+        margin-top: 60px;
+        width: 100%;
+        padding: 34px 54px;
+        flex-direction: column;
+        align-items: start;
+        font-family:
+            Poppins,
+            -apple-system,
+            Roboto,
+            Helvetica,
+            sans-serif;
+        color: rgba(255, 255, 255, 1);
+        }
+
+        .user-name {
+        font-size: 26px;
+        font-weight: 700;
+        margin-left: 10px;
+        }
+
+        .profile-nav {
+        margin-top: 41px;
+        width: 100%;
+        }
+
+        .profile-nav-list {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-size: 24px;
+        font-weight: 600;
+        justify-content: start;
+        flex-wrap: wrap;
+        }
+
+        .profile-nav-link {
+        display: block;
+        padding: 10px;
+        }
+
+        .profile-nav-link.active {
+        border-bottom: 6px solid rgba(50, 143, 250, 1);
+        }
+
+        /* Main Content */
+        .main-content {
+        align-self: center;
+        margin-top: 60px;
+        width: 100%;
+        max-width: 1312px;
+        }
+
+        .content-container {
+        display: flex;
+        gap: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+        width: 25%;
+        }
+
+        .filter-nav {
+        width: 100%;
+        font-family:
+            Poppins,
+            -apple-system,
+            Roboto,
+            Helvetica,
+            sans-serif;
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        font-weight: 600;
+        }
+
+        .filter-link {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        }
+
+        .filter-link.active {
+        background-color: rgba(214, 233, 254, 1);
+        border-left: 4px solid rgba(50, 143, 250, 1);
+        }
+
+        .filter-list li:not(:first-child) .filter-link {
+        margin-top: 12px;
+        }
+
+        /* Scholarship Section */
+        .scholarship-section {
+        width: 75%;
+        }
+
+        .scholarship-card {
+        border-radius: 12px;
+        background-color: rgba(218, 232, 241, 1);
+        display: flex;
+        width: 100%;
+        padding: 24px;
+        align-items: center;
+        gap: 40px 100px;
+        font-family:
+            Poppins,
+            -apple-system,
+            Roboto,
+            Helvetica,
+            sans-serif;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        }
+
+        .scholarship-info {
+        align-self: stretch;
+        display: flex;
+        min-width: 240px;
+        margin-top: auto;
+        margin-bottom: auto;
+        flex-direction: column;
+        align-items: stretch;
+        color: rgba(32, 87, 129, 1);
+        justify-content: center;
+        width: 347px;
+        }
+
+        .scholarship-title {
+        font-size: 20px;
+        font-weight: 600;
+        }
+
+        .scholarship-details {
+        display: flex;
+        margin-top: 8px;
+        width: 168px;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        font-size: 18px;
+        font-weight: 500;
+        justify-content: center;
+        }
+
+        .detail-label {
+        font-size: 20px;
+        }
+
+        .detail-button {
+        align-self: stretch;
+        border-radius: 12px;
+        background-color: rgba(32, 87, 129, 1);
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 18px;
+        gap: 10px;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 600;
+        text-align: center;
+        }
+
+        /* Footer */
+        .main-footer {
+        background-color: rgba(19, 52, 77, 1);
+        display: flex;
+        margin-top: 1342px;
+        width: 100%;
+        padding: 32px 216px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        }
+
+        .footer-container {
+        width: 100%;
+        max-width: 1007px;
+        }
+
+        .footer-columns {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 40px 156px;
+        justify-content: start;
+        flex-wrap: wrap;
+        }
+
+        .footer-column {
+        align-self: stretch;
+        min-width: 240px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-family:
+            Poppins,
+            -apple-system,
+            Roboto,
+            Helvetica,
+            sans-serif;
+        flex-grow: 1;
+        flex-shrink: 1;
+        }
+
+        .footer-column:first-child {
+        width: 308px;
+        }
+
+        .footer-column:nth-child(2),
+        .footer-column:nth-child(3) {
+        width: 141px;
+        }
+
+        .footer-heading {
+        color: rgba(140, 173, 198, 1);
+        font-size: 20px;
+        font-weight: 700;
+        }
+
+        .footer-nav-list {
+        display: flex;
+        margin-top: 8px;
+        width: 100%;
+        align-items: start;
+        gap: 12px;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 500;
+        justify-content: start;
+        }
+
+        .social-icons {
+        display: flex;
+        margin-top: 8px;
+        width: 100%;
+        align-items: center;
+        gap: 12px;
+        justify-content: start;
+        }
+
+        .social-icon {
+        width: 25px;
+        aspect-ratio: auto;
+        object-fit: contain;
+        object-position: center;
+        align-self: stretch;
+        margin-top: auto;
+        margin-bottom: auto;
+        flex-shrink: 0;
+        }
+
+        .social-icon:first-child {
+        aspect-ratio: 1.32;
+        }
+
+        .social-icon:last-child {
+        aspect-ratio: 1;
+        }
+
+        .copyright {
+        color: rgba(214, 214, 214, 1);
+        font-size: 16px;
+        font-family:
+            Poppins,
+            -apple-system,
+            Roboto,
+            Helvetica,
+            sans-serif;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 47px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 991px) {
+        .main-header {
+            max-width: 100%;
+            padding: 24px 20px;
+        }
+
+        .main-nav {
+            max-width: 100%;
+        }
+
+        .search-container {
+            max-width: 100%;
+        }
+
+        .search-input {
+            max-width: 100%;
+        }
+
+        .user-profile-section {
+            max-width: 100%;
+            padding: 34px 20px;
+            margin-top: 40px;
+        }
+
+        .profile-nav-list {
+            max-width: 100%;
+            margin-top: 40px;
+        }
+
+        .main-content {
+            max-width: 100%;
+            margin-top: 40px;
+        }
+
+        .content-container {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+        }
+
+        .sidebar {
+            width: 100%;
+        }
+
+        .filter-nav {
+            margin-top: 40px;
+        }
+
+        .scholarship-section {
+            width: 100%;
+        }
+
+        .scholarship-card {
+            max-width: 100%;
+            margin-top: 40px;
+            padding: 24px 20px;
+        }
+
+        .main-footer {
+            max-width: 100%;
+            margin-top: 40px;
+            padding: 32px 20px;
+        }
+
+        .footer-container {
+            max-width: 100%;
+        }
+
+        .copyright {
+            max-width: 100%;
+            margin-top: 40px;
+        }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-user-page">
+      <header class="main-header">
+        <h1 class="logo">SaPres</h1>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="#" class="nav-link">Beasiswa</a></li>
+            <li><a href="#" class="nav-link">Lomba</a></li>
+            <li><a href="#" class="nav-link">Cari Tim</a></li>
+            <li><a href="#" class="nav-link">Forum</a></li>
+          </ul>
+        </nav>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Ketik nama beasiswa/lomba yang ingin kamu cari"
+          />
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7ed5a6f91ea697d279de776216c90fc0e1fc7eb?placeholderIfAbsent=true&apiKey=bf0003d0fa184077a0cb93944c515b7e"
+            alt="User Profile"
+            class="profile-image"
+          />
+        </div>
+      </header>
+
+      <section class="user-profile-section">
+        <h2 class="user-name">Syahrul Ramadhan</h2>
+        <nav class="profile-nav">
+          <ul class="profile-nav-list">
+            <li>
+              <a href="#" class="profile-nav-link active">Beasiswa Tersimpan</a>
+            </li>
+            <li><a href="#" class="profile-nav-link">Lomba Tersimpan</a></li>
+            <li><a href="#" class="profile-nav-link">Tim yang Diikuti</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <main class="main-content" data-el="div-1">
+        <div class="content-container">
+          <aside class="sidebar">
+            <nav class="filter-nav">
+              <ul class="filter-list">
+                <li><a href="#" class="filter-link active">Semua</a></li>
+                <li>
+                  <a href="#" class="filter-link">Beasiswa Dalam Negeri</a>
+                </li>
+                <li>
+                  <a href="#" class="filter-link">Beasiswa Luar Negeri</a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+          <section class="scholarship-section">
+            <article class="scholarship-card">
+              <div class="scholarship-info">
+                <h3 class="scholarship-title">
+                  Beasiswa Pendidikan Prestasi Kita
+                </h3>
+                <div class="scholarship-details">
+                  <p class="detail-label">Pemberi</p>
+                  <p class="detail-value">S1 - Fully Funded</p>
+                  <p class="detail-value">Indonesia</p>
+                </div>
+              </div>
+              <a href="#" class="detail-button">Lihat Detail</a>
+            </article>
+          </section>
+        </div>
+      </main>
+
+      <footer class="main-footer">
+        <div class="footer-container">
+          <div class="footer-columns">
+            <section class="footer-column">
+              <h4 class="footer-heading">TENTANG</h4>
+              <nav class="footer-nav">
+                <ul class="footer-nav-list">
+                  <li><a href="#" class="footer-link">Tentang Kami</a></li>
+                  <li><a href="#" class="footer-link">FAQ</a></li>
+                  <li><a href="#" class="footer-link">Kebijakan Privasi</a></li>
+                </ul>
+              </nav>
+            </section>
+            <section class="footer-column">
+              <h4 class="footer-heading">LAINNYA</h4>
+              <nav class="footer-nav">
+                <ul class="footer-nav-list">
+                  <li><a href="#" class="footer-link">Beasiswa</a></li>
+                  <li><a href="#" class="footer-link">Lomba</a></li>
+                </ul>
+              </nav>
+            </section>
+            <section class="footer-column">
+              <h4 class="footer-heading">IKUTI KAMI</h4>
+              <div class="social-icons">
+                <a href="#" class="social-link">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e87551a1b7082c5f5389dc48b37fd7dd79ee738?placeholderIfAbsent=true&apiKey=bf0003d0fa184077a0cb93944c515b7e"
+                    alt="Social Media Icon"
+                    class="social-icon"
+                  />
+                </a>
+                <a href="#" class="social-link">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/c91424322cc678632ae651a2f6f756e6f93eed01?placeholderIfAbsent=true&apiKey=bf0003d0fa184077a0cb93944c515b7e"
+                    alt="Social Media Icon"
+                    class="social-icon"
+                  />
+                </a>
+              </div>
+            </section>
+          </div>
+          <p class="copyright">© 2025 SaPres by Hengker. All right reserved</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (() => {
+        const state = {};
+
+        let context = null;
+        let nodesToDestroy = [];
+        let pendingUpdate = false;
+
+        function destroyAnyNodes() {
+          // destroy current view template refs before rendering again
+          nodesToDestroy.forEach((el) => el.remove());
+          nodesToDestroy = [];
+        }
+
+        // Function to update data bindings and loops
+        // call update() when you mutate state and need the updates to reflect
+        // in the dom
+        function update() {
+          if (pendingUpdate === true) {
+            return;
+          }
+          pendingUpdate = true;
+
+          document.querySelectorAll("[data-el='div-1']").forEach((el) => {
+            el.setAttribute("space", 60);
+          });
+
+          destroyAnyNodes();
+
+          pendingUpdate = false;
+        }
+
+        // Update with initial state on first load
+        update();
+      })();
+    </script>
+  </body>
+</html>
