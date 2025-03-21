@@ -1,0 +1,182 @@
+
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+    
+            body {
+            font-family: "Poppins", sans-serif;
+            background-color: #fff;
+            }
+    
+            .page-container {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #fff;
+            }
+    
+            /* Main content styles */
+            .main-content {
+            padding-bottom: 40px;
+            }
+    
+            .page-title {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            }
+    
+            .title-text {
+            color: #333332;
+            font-size: 24px;
+            padding: 12px 24px;
+            border-radius: 12px;
+            background-color: #dae8f1;
+            font-weight: normal;
+            }
+    
+            .forum-topic {
+            margin-left: 64px;
+            margin-right: 64px;
+            margin-top: 40px;
+            padding: 12px 12px 24px 12px;
+            border-bottom: 1px solid #999998;
+            }
+    
+            .topic-title {
+            color: #333332;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            }
+    
+            .topic-tag-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            }
+    
+            .tag-indicator1 {
+            width: 27px;
+            height: 27px;
+            background-color: #fa4032;
+            }
+    
+            .tag-indicator2 {
+            width: 27px;
+            height: 27px;
+            background-color: #328FFA;
+            }
+    
+            .tag-indicator3 {
+            width: 27px;
+            height: 27px;
+            background-color: #32FA67;
+            }
+    
+            .tag-indicator4 {
+            width: 27px;
+            height: 27px;
+            background-color: #fa4032;
+            }
+    
+            .tag-text {
+            color: #333332;
+            font-size: 18px;
+            }
+    
+            .forum-post {
+            margin-left: 64px;
+            margin-right: 64px;
+            padding: 24px;
+            border-bottom: 1px solid #333332;
+            }
+    
+            .post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            }
+    
+            .user-avatar-name {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            }
+    
+            .post-date {
+            color: #333332;
+            font-size: 20px;
+            }
+    
+            .post-content {
+            width: 980px;
+            color: #333332;
+            font-size: 20px;
+            margin-left: 100px;
+            }
+    
+            .reply-indicator {
+            display: flex;
+            margin-left: 100px;
+            margin-top: 24px;
+            }
+    
+            .forum-reply {
+            margin-left: 180px;
+            padding: 24px 0px;
+            }
+    
+            .reply-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            }
+    
+            .reply-date {
+            color: #333332;
+            font-size: 20px;
+            }
+    
+            .reply-content {
+            width: 919px;
+            color: #333332;
+            font-size: 20px;
+            margin-left: 100px;
+            }
+    
+            /* Media queries */
+            @media (max-width: 991px) {
+    
+            .forum-topic,
+            .forum-post {
+                margin-left: 32px;
+                margin-right: 32px;
+            }
+    
+            .post-content,
+            .reply-content {
+                width: 100%;
+            }
+    
+            .forum-reply {
+                margin-left: 140px;
+            }
+            }
+    
+            @media (max-width: 640px) {
+    
+            .forum-topic,
+            .forum-post {
+                margin-left: 16px;
+                margin-right: 16px;
+            }
+    
+            .forum-reply {
+                margin-left: 80px;
+            }
+            }

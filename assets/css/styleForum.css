@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Poppins, sans-serif;
+  }
+
+  .hero-section {
+    width: 100%;
+    height: 292px;
+    display: flex;
+    align-items: center;
+    padding: 0 64px;
+    gap: 55px;
+    background-color: #205781;
+  }
+
+  .hero-logo {
+    width: 152px;
+    height: 152px;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-subtitle {
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .hero-title {
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .forum-guide {
+    padding: 12px 24px;
+    border-radius: 12px;
+    color: #333332;
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 40px auto;
+    width: fit-content;
+    background-color: #dae8f1;
+  }
+
+  .main-content {
+    display: flex;
+    padding: 0 64px;
+    gap: 56px;
+    margin-top: 40px;
+  }
+
+  .section-title {
+    padding: 10px;
+    color: #333332;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .section-title2 {
+    padding: 10px;
+    color: #333332;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px solid #777776;
+  }
+
+  .categories-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category-item1 {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 6px solid #FA4032;
+    background: #FED9D6;
+  }
+
+  .category-item1:hover {
+    background-color: #FA4032;
+  }
+
+  .category-item2 {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 6px solid #328FFA;
+    background: #D6E9FE;
+  }
+
+  .category-item2:hover {
+    background-color: #328FFA;
+  }
+
+  .category-item3 {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 6px solid #32FA67;
+    background: #D6FEE1;
+  }
+
+  .category-item3:hover {
+    background-color: #32FA67;
+  }
+
+  .category-item4 {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 6px solid #FA4032;
+  }
+
+  .category-item4:hover {
+    background-color: #FA4032;
+  }
+
+  .category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .category-name {
+    color: #333332;
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .category-count {
+    color: #777776;
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .category-content {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .category-icon {
+    width: 83px;
+    height: 83px;
+  }
+
+  .category-description {
+    color: #333332;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  .latest-posts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-item {
+    display: flex;
+    padding: 24px 12px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #999998;
+  }
+
+  .post-item:hover {
+    background-color:#d9d9d9;
+  }
+
+  .post-title {
+    width: 498px;
+    color: #333332;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  .post-date {
+    color: #333332;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    width: 120px;
+  }
+
+  @media (max-width: 991px) {
+
+    .hero-section {
+      padding: 0 32px;
+    }
+
+    .main-content {
+      padding: 0 32px;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 640px) {
+
+    .hero-section {
+      padding: 0 16px;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .main-content {
+      padding: 0 16px;
+    }
+
+    .post-item {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .post-title {
+      width: 100%;
+    }
+  }

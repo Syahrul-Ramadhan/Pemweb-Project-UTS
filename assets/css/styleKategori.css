@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+
+  @media (max-width: 991px) {
+    body {
+      max-width: 991px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    body {
+      max-width: 640px;
+    }
+  }
+
+  @media (max-width: 991px) {
+  }
+
+  @media (max-width: 640px) {
+  }
+
+  @media (max-width: 640px) {
+  }
+
+  .hero-section-beasiswa {
+    display: flex;
+    width: 100%;
+    height: 292px;
+    padding: 68px 396px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fa4032;
+  }
+
+  .hero-section-lomba {
+    display: flex;
+    width: 100%;
+    height: 292px;
+    padding: 68px 396px;
+    justify-content: center;
+    align-items: center;
+    background-color: #328FFA;
+  }
+
+  .hero-section-cariTim {
+    display: flex;
+    width: 100%;
+    height: 292px;
+    padding: 68px 396px;
+    justify-content: center;
+    align-items: center;
+    background-color: #32FA67;
+  }
+
+  .hero-section-faqs {
+    display: flex;
+    width: 100%;
+    height: 292px;
+    padding: 68px 396px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fa4032;
+  }
+
+  @media (max-width: 991px) {
+    .hero-section {
+      padding: 68px 40px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-section {
+      padding: 40px 20px;
+    }
+  }
+
+  .hero-content {
+    text-align: center;
+    color: #fff;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 640px) {
+    .hero-title {
+      font-size: 24px;
+    }
+  }
+
+  .hero-description {
+    font-size: 24px;
+    font-weight: 500;
+    max-width: 624px;
+  }
+
+  @media (max-width: 640px) {
+    .hero-description {
+      font-size: 18px;
+    }
+  }
+
+  .forum-guide {
+    padding: 12px 24px;
+    border-radius: 12px;
+    color: #333332;
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 40px auto;
+    width: fit-content;
+    background-color: #dae8f1;
+  }
+
+  @media (max-width: 640px) {
+    .forum-guide {
+      font-size: 18px;
+      padding: 8px 16px;
+    }
+  }
+
+  .forum-container {
+    width: 1312px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+
+  @media (max-width: 991px) {
+    .forum-container {
+      width: 100%;
+      padding: 0 24px;
+    }
+  }
+
+  .forum-header {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #777776;
+  }
+
+  .forum-header-topic {
+    color: #333332;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .forum-header-meta {
+    display: flex;
+    width: 272px;
+    justify-content: space-between;
+  }
+
+  .forum-header-answers{
+    margin-left: -40px;
+  }
+
+  .forum-header-answers,
+  .forum-header-updated {
+    color: #333332;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .forum-topic {
+    display: flex;
+    padding: 24px 12px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #999998;
+  }
+
+  .forum-topic:hover{
+    background-color: #d9d9d9;
+  }
+
+  .topic-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    .forum-topic {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .topic-title {
+    width: 745px;
+    color: #333332;
+    font-size: 18px;
+  }
+
+  @media (max-width: 640px) {
+    .topic-title {
+      width: 100%;
+    }
+  }
+
+  .topic-meta {
+    display: flex;
+    width: 275px;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 640px) {
+    .topic-meta {
+      width: 100%;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+  }
+
+  .topic-answers,
+  .topic-updated {
+    color: #333332;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .pagination-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    justify-content: center;
+    margin: 40px 0;
+  }
+
+  @media (max-width: 991px) {
+    .pagination-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .pagination-info {
+    color: #333332;
+    font-size: 20px;
+  }
+
+  .pagination-bold {
+    font-weight: 700;
+  }
+
+  .pagination-controls {
+    display: flex;
+    align-items: center;
+  }
+
+  .pagination-number, .pagination-prev, .pagination-next { 
+    cursor: pointer; 
+    padding: 5px 10px; 
+  }
+
+  .pagination-number {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #777776;
+    color: #333332;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pagination-prev,
+  .pagination-next {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 640px) {
+  }
+
+  @media (max-width: 640px) {
+  }
