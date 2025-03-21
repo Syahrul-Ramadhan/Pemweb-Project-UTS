@@ -1,0 +1,223 @@
+/* ---------- RESET & BASE STYLES ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Verdana, sans-serif;
+  color: var(--base-font-color);
+}
+
+body {
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --Primary-color: #205781;
+  --Secondary-color: #4f959d;
+  --fill-color: #d5e6e7;
+  --base-font-color: #333332;
+  --second-font-color: #777776;
+}
+
+/* ---------- HEADER START---------- */
+header {
+  display: flex;
+  margin: 60px 40px 0;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #ddd;
+}
+
+.head-btn {
+  display: flex;
+  gap: 24px;
+}
+
+.head-btn .bookmark,
+.head-btn .share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: solid 1px var(--Primary-color);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  cursor: pointer;
+  color: var(--Primary-color);
+}
+
+.head-btn .bookmark:hover,
+.head-btn .share:hover {
+  background-color: var(--Primary-color);
+  color: white;
+}
+
+.head-btn svg path {
+  color: var(--Primary-color);
+}
+
+.head-btn .bookmark:hover svg path,
+.head-btn .share:hover svg path {
+  color: white;
+}
+/* ---------- HEADER END---------- */
+
+/* ---------- INFO START---------- */
+.info-container {
+  display: flex;
+  margin: 60px 40px;
+  gap: 20px;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 20%;
+}
+
+.info-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.info-content .info-items {
+  display: flex;
+  gap: 6px;
+}
+
+.info-content span {
+  display: flex;
+  align-items: center;
+}
+/* ---------- INFO END---------- */
+
+/* ---------- TIPE & BENEFIT START---------- */
+.tipe-container {
+  margin: 0px 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tipe-container h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.tipe-container .tipe-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tipe-items {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #22c55e;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  gap: 12px;
+}
+
+.tipe-items span {
+  color: white;
+}
+/* ---------- TIPE & BENEFIT END---------- */
+
+/* ---------- CONDITION START---------- */
+.condition-container {
+  margin: 0px 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.condition-container h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.condition-container .condition-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.condition-items {
+  display: flex;
+  align-items: stretch;
+}
+
+.condition-items .point {
+  padding: 24px;
+  background-color: #eeeeee;
+  width: 30%;
+}
+
+.condition-items .desc {
+  padding: 24px 60px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(213, 230, 231, 0.5);
+}
+
+.desc li {
+  color: #777776;
+  font-size: 17px;
+  padding-left: 6px;
+  padding-bottom: 6px;
+}
+
+.condition-items ul li {
+  list-style: disc;
+}
+
+.desc li a {
+  text-decoration: underline;
+}
+/* ---------- CONDITION END---------- */
+
+/* ---------- DAFTAR START---------- */
+.button-container {
+  margin: 60px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container .daftar-btn {
+  background-color: var(--Primary-color);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-container .daftar-btn:hover {
+  background-color: #1a4667;
+}
+/* ---------- DAFTAR END---------- */
