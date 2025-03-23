@@ -5,39 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaPres - Lomba</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navbar Start -->
     <header class="navbar">
         <div class="nav-responsive">
             <div class="burger-menu" id="burger-menu">
                 <span></span>
             </div>
-            <div class="logo">
-                <a href="../index.html">SaPres</a>
-            </div>
+            <a href="../index.html" class="logo">SaPres</a>
         </div>
         
-        <div class="nav-content">
-            <nav class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="beasiswa.html">Beasiswa</a></li>
-                    <li><a href="lomba.html" class="active">Lomba</a></li>
-                    <li><a href="cari-tim.html">Cari Tim</a></li>
-                    <li><a href="forum.html">Forum</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="beasiswa.html">Beasiswa</a></li>
+                <li><a href="lomba.html" class="active">Lomba</a></li>
+                <li><a href="cari-tim.html">Cari Tim</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+        </nav>
         
-        <div class="search-container">
-            <div class="search-bar">
-                <input type="text" placeholder="Cari lomba">
-            </div>
-            <button class="search-btn">Cari</button>
-            <div class="search-icon">
-                <i class="fas fa-search"></i>
-            </div>
+        <!-- Integrated search bar - ALWAYS VISIBLE -->
+        <div class="search-container-inline">
+            <input type="text" placeholder="Ketik nama lomba yang ingin kamu cari" id="search-input">
         </div>
         
         <div class="auth-buttons">
@@ -45,19 +38,28 @@
             <button class="btn btn-register">Daftar</button>
         </div>
         
+        <!-- Mobile Menu -->
         <div class="menu-responsive" id="menu-responsive">
-            <ul class="nav-list">
+            <ul>
                 <li><a href="beasiswa.html">Beasiswa</a></li>
                 <li><a href="lomba.html" class="active">Lomba</a></li>
                 <li><a href="cari-tim.html">Cari Tim</a></li>
                 <li><a href="forum.html">Forum</a></li>
             </ul>
-            <div class="auth-buttons mobile-auth">
-                <button class="btn btn-login">Masuk</button>
-                <button class="btn btn-register">Daftar</button>
-            </div>
         </div>
+        
+        <!-- Overlay for closing mobile menu -->
+        <div class="close-nav" id="close-nav"></div>
     </header>
+    
+    <!-- Search Container (outside navbar) -->
+    <div class="search-container" id="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Ketik nama lomba yang ingin kamu cari" id="search-input">
+        </div>
+        <button class="search-btn" id="search-btn">Cari</button>
+    </div>
+    <!-- Navbar End -->
 
     <main class="main-content">
         <div class="page-title">
@@ -364,13 +366,64 @@
                             </div>
                             <a href="#" class="card-link"></a>
                         </div>
+
+                        <!-- Card 7 -->
+                        <div class="competition-card">
+                            <div class="card-image">
+                                <img src="https://dashboard.codeparrot.ai/api/image/Z9-K2v8PKu40N2Jp/image-2.png" alt="Competition">
+                                <div class="card-badge">Baru</div>
+                            </div>
+                            <div class="card-content">
+                                <h3>IoT Innovation Challenge 2025 by Schneider Electric</h3>
+                                <div class="organizer">
+                                    <p><i class="fas fa-building"></i> Schneider Electric</p>
+                                    <p><i class="fas fa-globe"></i> Tingkat Nasional</p>
+                                    <p><i class="fas fa-graduation-cap"></i> untuk D3, D4, S1</p>
+                                </div>
+                                <div class="date-bookmark">
+                                    <div class="dates">
+                                        <p><i class="far fa-calendar-alt"></i> Mulai: 22 Maret 2025</p>
+                                        <p class="deadline"><i class="fas fa-clock"></i> Deadline: 10 April 2025</p>
+                                    </div>
+                                    <button class="bookmark-btn" aria-label="Bookmark">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <a href="#" class="card-link"></a>
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div class="competition-card">
+                            <div class="card-image">
+                                <img src="https://dashboard.codeparrot.ai/api/image/Z9-K2v8PKu40N2Jp/image-3.png" alt="Competition">
+                            </div>
+                            <div class="card-content">
+                                <h3>Artificial Intelligence Competition by Microsoft Indonesia</h3>
+                                <div class="organizer">
+                                    <p><i class="fas fa-building"></i> Microsoft Indonesia</p>
+                                    <p><i class="fas fa-globe"></i> Tingkat Nasional</p>
+                                    <p><i class="fas fa-graduation-cap"></i> untuk D3, D4, S1</p>
+                                </div>
+                                <div class="date-bookmark">
+                                    <div class="dates">
+                                        <p><i class="far fa-calendar-alt"></i> Mulai: 25 Maret 2025</p>
+                                        <p class="deadline"><i class="fas fa-clock"></i> Deadline: 15 April 2025</p>
+                                    </div>
+                                    <button class="bookmark-btn" aria-label="Bookmark">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <a href="#" class="card-link"></a>
+                        </div>
                     </div>
                     
                     <div class="pagination">
-                        <button class="pagination-btn active">1</button>
-                        <button class="pagination-btn">2</button>
-                        <button class="pagination-btn">3</button>
-                        <button class="pagination-btn next">
+                        <button class="pagination-btn active" data-page="1">1</button>
+                        <button class="pagination-btn" data-page="2">2</button>
+                        <button class="pagination-btn" data-page="3">3</button>
+                        <button class="pagination-btn next" id="next-page">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
@@ -426,46 +479,7 @@
         </div>
     </footer>
 
-    <script>
-        // Toggle mobile menu
-        document.getElementById('burger-menu').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.getElementById('menu-responsive').classList.toggle('active');
-        });
-        
-        // Toggle search on mobile
-        document.querySelector('.search-icon').addEventListener('click', function() {
-            document.querySelector('.search-container').classList.toggle('active');
-        });
-        
-        // Bookmark functionality
-        document.querySelectorAll('.bookmark-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.classList.toggle('bookmarked');
-                if (this.classList.contains('bookmarked')) {
-                    this.querySelector('i').classList.replace('far', 'fas');
-                } else {
-                    this.querySelector('i').classList.replace('fas', 'far');
-                }
-            });
-        });
-    
-        // Month selector
-        document.querySelectorAll('.month-button').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.month-button').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-        
-        // Toggle filter sidebar on mobile
-        document.querySelector('.filter-toggle').addEventListener('click', function() {
-            document.querySelector('.filter-content').classList.toggle('active');
-            this.querySelector('i').classList.toggle('fa-chevron-up');
-            this.querySelector('i').classList.toggle('fa-chevron-down');
-        });
-    </script>    
+    <script src="../assets/js/main.js"></script>    
     
 </body>
 </html>

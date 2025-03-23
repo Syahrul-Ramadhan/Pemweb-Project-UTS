@@ -1,161 +1,244 @@
-// Hamburger Menu dan side Navbar
-const burgerMenu = document.querySelector(".burger-menu");
-const sideNav = document.querySelector(".menu-responsive");
-const close = document.querySelector(".close-nav");
+// HALAMAN LOMBA
 
-// Buka Side Navbar
-burgerMenu.addEventListener("click", () => {
-  sideNav.classList.add("active");
-  close.classList.add("active");
-});
-
-// Tutup Side Navbar dengan Klik di Luar
-close.addEventListener("click", () => {
-  sideNav.classList.remove("active");
-  close.classList.remove("active");
-});
-
-// Search button ketika lebar layar kurang dari 1080
-const searchIcon = document.querySelector(".search-icon");
-const searchContainer = document.querySelector(".search-container");
-
-// Fungsi untuk mengontrol tampilan search bar
-function toggleSearchBar() {
-  if (window.innerWidth <= 1080) {
-    // Jika layar kecil, toggle search bar bisa muncul/menghilang saat search icon diklik
-    if (
-      searchContainer.style.display === "none" ||
-      searchContainer.style.display === ""
-    ) {
-      searchContainer.style.display = "flex";
-    } else {
-      searchContainer.style.display = "none";
-    }
-  }
-}
-
-// Event listener saat ikon pencarian diklik
-searchIcon.addEventListener("click", toggleSearchBar);
-
-// Event listener saat ukuran layar berubah
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 1080) {
-    searchContainer.style.display = "flex"; // Selalu tampil di layar besar
-  } else {
-    searchContainer.style.display = "none"; // Sembunyikan saat layar kecil
-  }
-});
-
-// Panggil event sekali saat halaman dimuat untuk menyesuaikan kondisi awal
-window.dispatchEvent(new Event("resize"));
-
-// Halaman Lomba
-
-// Filter functionality
-document.querySelector('.filter-reset').addEventListener('click', function() {
-    const selects = document.querySelectorAll('.filter-group select');
-    selects.forEach(select => {
-        select.selectedIndex = 0;
-    });
-});
-
-// Search functionality
-document.querySelector('.lomba-search-button').addEventListener('click', function() {
-    const searchTerm = document.querySelector('.lomba-search-input').value.toLowerCase();
-    if (searchTerm) {
-        // In a real application, this would trigger a search request
-        alert('Mencari: ' + searchTerm);
-    }
-});
-
-// View more button
-document.querySelector('.view-more-btn').addEventListener('click', function() {
-    // In a real application, this would load more competitions
-    alert('Memuat lebih banyak lomba...');
-});
-
-// Pagination
-document.querySelectorAll('.pagination-number').forEach(item => {
-    item.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelectorAll('.pagination-number').forEach(num => {
-            num.classList.remove('active');
+document.addEventListener('DOMContentLoaded', function() {
+    // Burger menu toggle
+    const burgerMenu = document.getElementById('burger-menu');
+    const menuResponsive = document.getElementById('menu-responsive');
+    const closeNav = document.getElementById('close-nav');
+    
+    if (burgerMenu && menuResponsive && closeNav) {
+        burgerMenu.addEventListener('click', function() {
+            this.classList.toggle('active');
+            menuResponsive.classList.toggle('active');
+            closeNav.classList.toggle('active');
         });
-        this.classList.add('active');
-        // In a real application, this would load the corresponding page
-    });
-});
-
-// Newsletter subscription
-document.querySelector('.newsletter-button').addEventListener('click', function() {
-    const email = document.querySelector('.newsletter-input').value;
-    if (email && /^\S+@\S+\.\S+$/.test(email)) {
-        alert('Terima kasih telah berlangganan newsletter kami!');
-        document.querySelector('.newsletter-input').value = '';
-    } else {
-        alert('Mohon masukkan alamat email yang valid.');
-    }
-});
-
-// Halaman Detail Lomba
-
-
-// Tab switching functionality
-document.querySelectorAll('.tab-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        // Remove active class from all buttons and content
-        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
         
-        // Add active class to clicked button
-        this.classList.add('active');
-        
-        // Show corresponding content
-        const tabId = this.getAttribute('data-tab');
-        document.getElementById(tabId).classList.add('active');
-    });
-});
-
-// Bookmark functionality
-document.querySelector('.btn-bookmark').addEventListener('click', function() {
-    const icon = this.querySelector('i');
-    if (icon.classList.contains('far')) {
-        icon.classList.replace('far', 'fas');
-        alert('Lomba disimpan ke daftar favorit!');
-    } else {
-        icon.classList.replace('fas', 'far');
-        alert('Lomba dihapus dari daftar favorit!');
+        closeNav.addEventListener('click', function() {
+            burgerMenu.classList.remove('active');
+            menuResponsive.classList.remove('active');
+            this.classList.remove('active');
+        });
     }
-});
-
-// Share functionality
-document.querySelector('.btn-share').addEventListener('click', function() {
-    if (navigator.share) {
-        navigator.share({
-            title: 'GEMASTIK XV - Pagelaran Mahasiswa Nasional Bidang TIK',
-            text: 'Cek lomba GEMASTIK XV dengan total hadiah Rp 500.000.000!',
-            url: window.location.href
-        })
-        .catch(error => console.log('Error sharing:', error));
-    } else {
-        alert('Bagikan link: ' + window.location.href);
-    }
-});
-
-// FAQ toggle
-document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', function() {
-        const answer = this.nextElementSibling;
-        const icon = this.querySelector('i');
-        
-        if (answer.style.maxHeight) {
-            answer.style.maxHeight = null;
-            icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-        } else {
-            answer.style.maxHeight = answer.scrollHeight + 'px';
-            icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+    
+    // Search functionality
+    const searchInput = document.getElementById('search-input');
+    
+    if (searchInput) {
+        // Function to handle search
+        function handleSearch() {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            if (searchTerm.length > 0) {
+                // Update section title to show search term
+                const sectionTitle = document.querySelector('.competition-header .section-title');
+                if (sectionTitle) {
+                    sectionTitle.textContent = `Lomba untuk "${searchTerm}"`;
+                }
+                
+                // Filter competition cards
+                const cards = document.querySelectorAll('.competition-card');
+                let matchCount = 0;
+                
+                cards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const organizer = card.querySelector('.organizer').textContent.toLowerCase();
+                    
+                    // Check if card matches search term
+                    if (title.includes(searchTerm) || organizer.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                        }, 150 * matchCount); // Staggered animation
+                        matchCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Show message if no results found
+                const noResultsMsg = document.getElementById('no-results-message');
+                if (matchCount === 0) {
+                    if (!noResultsMsg) {
+                        const competitionGrid = document.querySelector('.competition-grid');
+                        const message = document.createElement('div');
+                        message.id = 'no-results-message';
+                        message.className = 'no-results-message';
+                        message.innerHTML = `
+                            <i class="fas fa-search"></i>
+                            <h3>Tidak ada hasil untuk "${searchTerm}"</h3>
+                            <p>Coba kata kunci lain atau filter yang berbeda</p>
+                            <button class="btn btn-reset-search">Reset Pencarian</button>
+                        `;
+                        competitionGrid.appendChild(message);
+                        
+                        // Add event listener to reset button
+                        document.querySelector('.btn-reset-search').addEventListener('click', resetSearch);
+                    }
+                } else if (noResultsMsg) {
+                    noResultsMsg.remove();
+                }
+                
+                // Hide pagination if searching
+                const pagination = document.querySelector('.pagination');
+                if (pagination) {
+                    pagination.style.display = 'none';
+                }
+                
+                // Add reset button to search if not already there
+                if (!document.querySelector('.search-reset-btn')) {
+                    const resetBtn = document.createElement('button');
+                    resetBtn.className = 'search-reset-btn';
+                    resetBtn.innerHTML = '<i class="fas fa-times"></i>';
+                    resetBtn.addEventListener('click', resetSearch);
+                    
+                    // Append to the parent of search input
+                    searchInput.parentNode.appendChild(resetBtn);
+                }
+            }
         }
-    });
+        
+        // Function to reset search
+        function resetSearch() {
+            // Clear search input
+            searchInput.value = '';
+            
+            // Reset section title
+            const sectionTitle = document.querySelector('.competition-header .section-title');
+            if (sectionTitle) {
+                sectionTitle.textContent = 'Lomba Bulan Maret';
+            }
+            
+            // Show all cards
+            const cards = document.querySelectorAll('.competition-card');
+            cards.forEach(card => {
+                card.style.display = 'flex';
+                card.style.opacity = '1';
+            });
+            
+            // Remove no results message if it exists
+            const noResultsMsg = document.getElementById('no-results-message');
+            if (noResultsMsg) {
+                noResultsMsg.remove();
+            }
+            
+            // Show pagination again
+            const pagination = document.querySelector('.pagination');
+            if (pagination) {
+                pagination.style.display = 'flex';
+            }
+            
+            // Remove reset button
+            const resetBtn = document.querySelector('.search-reset-btn');
+            if (resetBtn) {
+                resetBtn.remove();
+            }
+        }
+        
+        // Event listener for search on Enter key
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleSearch();
+            }
+        });
+    }
+    
+    // Toggle mobile menu
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    }
+
+    // Toggle filter sidebar on mobile
+    const filterToggle = document.querySelector('.filter-toggle');
+    if (filterToggle) {
+        filterToggle.addEventListener('click', function() {
+            document.querySelector('.filter-content').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-chevron-up');
+            this.querySelector('i').classList.toggle('fa-chevron-down');
+        });
+    }
+
+    // Bookmark functionality
+    const bookmarkButtons = document.querySelectorAll('.bookmark-btn');
+    if (bookmarkButtons.length > 0) {
+        bookmarkButtons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.classList.toggle('bookmarked');
+                if (this.classList.contains('bookmarked')) {
+                    this.querySelector('i').classList.replace('far', 'fas');
+                } else {
+                    this.querySelector('i').classList.replace('fas', 'far');
+                }
+            });
+        });
+    }
+
+    // Month selector
+    const monthButtons = document.querySelectorAll('.month-button');
+    if (monthButtons.length > 0) {
+        monthButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.month-button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    }
+    
+    // Pagination functionality
+    const paginationButtons = document.querySelectorAll('.pagination-btn');
+    const nextPageButton = document.querySelector('.pagination-btn.next');
+    let currentPage = 1;
+
+    // Function to simulate loading different pages
+    function loadPage(pageNumber) {
+        // Update active state of pagination buttons
+        paginationButtons.forEach(btn => {
+            if (parseInt(btn.textContent) === pageNumber) {
+                btn.classList.add('active');
+            } else if (!isNaN(parseInt(btn.textContent))) {
+                btn.classList.remove('active');
+            }
+        });
+        
+        // Update current page
+        currentPage = pageNumber;
+        
+        // Scroll to top of competition container
+        document.querySelector('.competition-container').scrollIntoView({ behavior: 'smooth' });
+        
+        // Simulate loading new content with animation
+        const cards = document.querySelectorAll('.competition-card');
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            setTimeout(() => {
+                card.style.opacity = '1';
+            }, 300);
+        });
+        
+        // Update section title to show current page
+        document.querySelector('.competition-header .section-title').textContent = `Lomba Bulan Maret (Halaman ${pageNumber})`;
+    }
+
+    // Add click event to pagination buttons
+    if (paginationButtons.length > 0) {
+        paginationButtons.forEach(btn => {
+            if (!isNaN(parseInt(btn.textContent))) {
+                btn.addEventListener('click', function() {
+                    loadPage(parseInt(this.textContent));
+                });
+            }
+        });
+    }
+
+    // Add click event to next button
+    if (nextPageButton) {
+        nextPageButton.addEventListener('click', function() {
+            if (currentPage < 3) {
+                loadPage(currentPage + 1);
+            }
+        });
+    }
 });
-
-
