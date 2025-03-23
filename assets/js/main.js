@@ -243,6 +243,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Make sure bookmark buttons don't trigger card links
+document.addEventListener('DOMContentLoaded', function() {
+    const bookmarkBtns = document.querySelectorAll('.bookmark-btn');
+    
+    bookmarkBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            // Stop the click event from bubbling up to the card link
+            e.stopPropagation();
+            e.preventDefault();
+            
+            // Toggle bookmark state
+            this.classList.toggle('bookmarked');
+            
+            // Change the icon
+            if (this.classList.contains('bookmarked')) {
+                this.querySelector('i').classList.replace('far', 'fas');
+            } else {
+                this.querySelector('i').classList.replace('fas', 'far');
+            }
+        });
+    });
+});
+
+
 // DETAIL LOMBA JS
 document.addEventListener('DOMContentLoaded', function() {
     // Bookmark functionality for detail page
