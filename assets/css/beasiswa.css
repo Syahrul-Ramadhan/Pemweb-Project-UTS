@@ -38,150 +38,13 @@ ul {
   width: 100%;
 }
 
-/* ---------- FILTER START ---------- */
-.filter-wrap {
-  overflow-y: scroll;
-  top: 0;
-  margin-left: 40px;
-  height: 600px;
-}
-
-.filter-container {
-  background-color: rgba(213, 230, 231, 0.5);
-  padding: 12px;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: 800px;
-}
-
-.filter-head {
-  display: flex;
-  text-align: center;
-  gap: 12px;
-  padding: 16px;
-  border-bottom: solid 1px #999998;
-}
-
-.filter-content {
-  padding: 8px;
-  text-align: start;
-}
-
-.filter-content h4 {
-  font-weight: 600;
-}
-
-.checkbox-filter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 8px 0;
-}
-
-.filter-jenjang {
-  display: flex;
-  flex-direction: column;
-  border-bottom: solid 1px #999998;
-}
-
-.checkbox-label {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 8px;
-}
-
-.checkbox-filter input {
-  opacity: 0;
-}
-
-.custom-checkbox {
-  width: 24px;
-  height: 24px;
-  border: 1px solid var(--Primary-color);
-  background-color: white;
-  border-radius: 5px;
-  display: inline-block;
-  position: relative;
-  margin-right: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-
-.checkbox-filter input:checked + .custom-checkbox {
-  background-color: #004a80;
-  border-color: #004a80;
-}
-
-.checkbox-filter input:checked + .custom-checkbox::after {
-  content: "✔";
-  position: absolute;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  left: 6px;
-  top: 0;
-}
-
-.filter-tipe {
-  padding-top: 12px;
-  border-bottom: solid 1px #999998;
-}
-
-.filter-negara {
-  padding: 12px 0 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  border-bottom: solid 1px #999998;
-}
-
-.filter-univ {
-  padding: 12px 0 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.filter-negara input,
-.filter-univ input {
-  width: 100%;
-  height: 100%;
-  border: solid 1px #999998;
-  outline: none;
-  background-color: #ddd;
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-  padding: 8px 12px;
-}
-.filter-negara input::placeholder,
-.filter-univ input::placeholder {
-  color: #999998;
-}
-/* ---------- FILTER END ---------- */
-
 /* ---------- MAIN CONTENT START ---------- */
 .main-content {
   display: flex;
   flex-direction: column;
   margin: 0 24px;
-  width: 70%;
+  max-width: 100%;
+  overflow: hidden;
 }
 /* ---------- MAIN CONTENT END ---------- */
 
@@ -255,6 +118,7 @@ ul {
 /* ---------- MONTH SET END ---------- */
 
 /* ---------- BEASISWA LIST START ---------- */
+
 .beasiswa-container {
   padding: 12px 0;
 }
@@ -266,18 +130,75 @@ ul {
 .beasiswa-list {
   display: flex;
   flex-direction: column;
-  margin: 24px 0 0;
+  margin: 12px 0 0;
   gap: 18px;
 }
+/* ------- BEASISWA MD START ------- */
 
-.beasiswa-list .beasiswa-card {
+.beasiswa-list .beasiswa-card-md {
   display: flex;
   background: var(--fill-color);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
   overflow: hidden;
-  padding: 18px 12px;
+  padding: 14px 8px;
+  flex: 0 0 auto;
+}
+
+.beasiswa-card-md .card-content {
+  display: flex;
+  gap: 6px;
+}
+
+.beasiswa-card-md .head-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.beasiswa-card-md .degrees {
+  display: flex;
+  gap: 8px;
+}
+
+.beasiswa-card-md .degree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #4f959d;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.beasiswa-card-md .title {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.beasiswa-card-md .start-date,
+.beasiswa-card-md .deadline {
+  font-size: 12px;
+}
+
+.beasiswa-card-md .dates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* ------- BEASISWA LG START ------- */
+
+.beasiswa-list .beasiswa-card {
+  display: none;
+  background: var(--fill-color);
+  border-radius: 8px;
+  width: 100%;
+  overflow: hidden;
+  padding: 16px 12px;
   flex: 0 0 auto;
 }
 
@@ -298,8 +219,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background: #4f959d;
   color: white;
   font-weight: bold;
@@ -309,7 +230,7 @@ ul {
 
 .dates {
   margin-top: 12px;
-  font-size: 14px;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -333,13 +254,13 @@ ul {
   justify-content: space-between;
 }
 
-.card-content .head-card {
+.beasiswa-card .card-content .head-card {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.title {
+.beasiswa-card .title {
   font-size: 18px;
   font-weight: bold;
 }
@@ -349,7 +270,7 @@ ul {
   color: #666;
 }
 
-.bookmark {
+.beasiswa-card .bookmark {
   display: flex;
   justify-content: end;
 }
@@ -370,3 +291,26 @@ ul {
 }
 /* ---------- BEASISWA LIST END ---------- */
 /* ---------- MAIN END ---------- */
+
+/* ---------- RESPONSIVE ---------- */
+@media (min-width: 640px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1080px) {
+  .main-content {
+    width: 100%;
+  }
+
+  .beasiswa-list .beasiswa-card-md {
+    display: none;
+  }
+  .beasiswa-list .beasiswa-card {
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .main-content {
+    width: 70%;
+  }
+}

@@ -135,12 +135,11 @@ ul {
   display: flex;
   align-items: start;
   justify-content: center;
-  margin-left: 150px;
+  margin-left: 24px;
 }
 
 .beasiswa-info {
-  padding: 0 24px;
-  max-width: 400px;
+  display: none;
 }
 
 .beasiswa-info h2,
@@ -167,9 +166,9 @@ ul {
   background: var(--fill-color);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 350px;
   overflow: hidden;
-  padding: 12px;
+  padding: 8px;
   flex: 0 0 auto;
 }
 
@@ -292,12 +291,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 150px;
+  margin-left: 24px;
 }
 
 .lomba-info {
-  padding: 0 24px;
-  max-width: 400px;
+  display: none;
 }
 
 .lomba-info h2,
@@ -327,6 +325,16 @@ ul {
   margin-bottom: 40px;
 }
 
+.find-team-head h2 {
+  font-size: 20px;
+}
+
+.find-team-head p {
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+
 .find-team-content {
   display: flex;
   align-items: center;
@@ -339,7 +347,7 @@ ul {
 .find-team-content .card-fteam {
   background-color: var(--fill-color);
   min-width: 320px;
-  padding: 20px;
+  padding: 14px;
   align-items: center;
   border-radius: 12px;
   -webkit-border-radius: 12px;
@@ -354,11 +362,15 @@ ul {
 }
 
 .head-card h3 {
-  font-size: 18px;
+  font-size: 16px;
 }
 .head-card p,
 .info-uni span {
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.info-uni svg {
+  width: 16px;
 }
 
 .head-card .info-uni {
@@ -375,25 +387,31 @@ ul {
 
 .card-fteam .body-card p {
   font-size: 14px;
+  display: none;
 }
 
 .card-fteam .foot-card {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 12px;
-  margin: 16px 0;
+  margin: 14px 0 0 0;
 }
 
 .foot-card .profile-team {
   display: flex;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 12px 0 0;
   gap: 12px;
 }
 
 .foot-card .profile-team img {
   width: 35px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .profile-team .detail-info {
@@ -409,8 +427,8 @@ ul {
   font-size: 14px;
 }
 .foot-card .card-btn {
-  padding: 12px;
-  font-size: 14px;
+  padding: 10px;
+  font-size: 12px;
   background-color: var(--Primary-color);
   border-radius: 12px;
   -webkit-border-radius: 12px;
@@ -504,16 +522,78 @@ ul {
   /* ------ CAROUSEL END------ */
 
   /* ------ BEASISWA START------ */
+  .beasiswa-info {
+    display: block;
+    padding: 0 24px;
+    max-width: 400px;
+  }
+
+  .beasiswa-content {
+    margin-left: 150px;
+  }
+
   .beasiswa-head .line-head svg {
     width: 300px;
   }
   /* ------ BEASISWA END------ */
 
   /* ------ LOMBA START------ */
+  .lomba-info {
+    display: block;
+    padding: 0 24px;
+    max-width: 400px;
+  }
+
+  .lomba-content {
+    margin-left: 150px;
+  }
+
   .lomba-head .line-head svg {
     width: 300px;
   }
   /* ------ LOMBA END------ */
+
+  /* ------ CARI TIM START------ */
+  .find-team-head h2 {
+    font-size: 24px;
+  }
+
+  .find-team-head p {
+    font-size: 18px;
+  }
+
+  .card-fteam {
+    padding: 20px;
+  }
+
+  .head-card h3 {
+    font-size: 18px;
+  }
+
+  .card-fteam .body-card p {
+    display: block;
+  }
+
+  .head-card p,
+  .info-uni span {
+    font-size: 14px;
+  }
+
+  .info-uni svg {
+    width: 24px;
+  }
+
+  .card-fteam .foot-card {
+    justify-content: center;
+    margin: 16px 0;
+    margin: 14px 0 8px 0;
+  }
+
+  .foot-card .card-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+  /* ------ CARI TIM END------ */
 }
 @media (min-width: 1080px) {
   /* ------ BEASISWA START------ */
