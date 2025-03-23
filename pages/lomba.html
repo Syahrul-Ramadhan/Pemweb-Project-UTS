@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,17 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lomba | Luarkampus</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+>>>>>>> 186c9a918a636f2f7aa8d1ce7d69af0ade3580d5
     <!-- NAVBAR START -->
     <nav class="navbar">
       <div class="nav-responsive">
@@ -17,7 +29,10 @@
           <a href="#">SaPres</a>
         </div>
       </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 186c9a918a636f2f7aa8d1ce7d69af0ade3580d5
       <div class="nav-content">
         <div class="menu-responsive">
           <ul>
@@ -27,9 +42,13 @@
             <li><a href="#">Forum</a></li>
             <li><a href="login.html">MASUK</a></li>
             <li>
+<<<<<<< HEAD
               <a href="register.html" class="btn-register register-responsive"
                 >DAFTAR</a
               >
+=======
+              <a href="register.html" class="btn-register register-responsive">DAFTAR</a>
+>>>>>>> 186c9a918a636f2f7aa8d1ce7d69af0ade3580d5
             </li>
           </ul>
         </div>
@@ -83,7 +102,352 @@
     </nav>
     <!-- NAVBAR END -->
 
+<<<<<<< HEAD
     <!-- Java Script -->
     <script src="../assets/js/main.js"></script>
   </body>
+=======
+    <main class="lomba-main">
+        <!-- Hero Section -->
+        <section class="lomba-hero">
+            <div class="lomba-hero-content">
+                <h1>Temukan Lomba Terbaik untuk Kembangkan Potensimu</h1>
+                <p>Raih prestasi dan pengalaman berharga melalui berbagai kompetisi nasional dan internasional</p>
+                <div class="lomba-search-container">
+                    <input type="text" placeholder="Cari lomba berdasarkan nama, kategori, atau penyelenggara" class="lomba-search-input">
+                    <button class="lomba-search-button">Cari Lomba</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="lomba-filter">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label>Kategori</label>
+                    <select id="kategori-filter">
+                        <option value="">Semua Kategori</option>
+                        <option value="teknologi">Teknologi</option>
+                        <option value="bisnis">Bisnis</option>
+                        <option value="sains">Sains</option>
+                        <option value="sosial">Sosial</option>
+                        <option value="seni">Seni & Budaya</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Tingkat</label>
+                    <select id="tingkat-filter">
+                        <option value="">Semua Tingkat</option>
+                        <option value="nasional">Nasional</option>
+                        <option value="internasional">Internasional</option>
+                        <option value="regional">Regional</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Deadline</label>
+                    <select id="deadline-filter">
+                        <option value="">Semua Waktu</option>
+                        <option value="minggu">Minggu Ini</option>
+                        <option value="bulan">Bulan Ini</option>
+                        <option value="3bulan">3 Bulan Ke Depan</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Hadiah</label>
+                    <select id="hadiah-filter">
+                        <option value="">Semua Hadiah</option>
+                        <option value="uang">Uang Tunai</option>
+                        <option value="beasiswa">Beasiswa</option>
+                        <option value="magang">Magang</option>
+                    </select>
+                </div>
+                <button class="filter-reset">Reset Filter</button>
+            </div>
+        </section>
+
+        <!-- Featured Competitions -->
+        <section class="featured-competitions">
+            <div class="section-header">
+                <h2>Lomba Unggulan</h2>
+                <p>Kompetisi populer dengan hadiah menarik</p>
+            </div>
+            <div class="competitions-grid">
+                <div class="competition-card featured">
+                    <div class="competition-image">
+                        <img src="../assets/images/lomba-gemastik.jpg" alt="GEMASTIK">
+                        <div class="competition-deadline">Deadline: 30 Juni 2023</div>
+                    </div>
+                    <div class="competition-content">
+                        <div class="competition-tags">
+                            <span class="tag tag-tech">Teknologi</span>
+                            <span class="tag tag-national">Nasional</span>
+                        </div>
+                        <h3>GEMASTIK XV - Pagelaran Mahasiswa Nasional Bidang TIK</h3>
+                        <p class="competition-organizer">Oleh: Kementerian Pendidikan dan Kebudayaan</p>
+                        <p class="competition-desc">Kompetisi teknologi informasi dan komunikasi tingkat nasional untuk mahasiswa dengan berbagai kategori lomba.</p>
+                        <div class="competition-prize">
+                            <i class="fas fa-trophy"></i>
+                            <span>Total Hadiah: Rp 500.000.000</span>
+                        </div>
+                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="../assets/images/lomba-data-science.jpg" alt="Data Science Competition">
+                        <div class="competition-deadline">Deadline: 15 Juli 2023</div>
+                    </div>
+                    <div class="competition-content">
+                        <div class="competition-tags">
+                            <span class="tag tag-tech">Teknologi</span>
+                            <span class="tag tag-international">Internasional</span>
+                        </div>
+                        <h3>Indonesia Data Science Competition 2023</h3>
+                        <p class="competition-organizer">Oleh: Kaggle & Telkom Indonesia</p>
+                        <p class="competition-desc">Kompetisi data science untuk mengembangkan solusi inovatif berbasis data untuk masalah sosial di Indonesia.</p>
+                        <div class="competition-prize">
+                            <i class="fas fa-trophy"></i>
+                            <span>Total Hadiah: $10,000</span>
+                        </div>
+                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="../assets/images/lomba-bisnis.jpg" alt="Business Plan Competition">
+                        <div class="competition-deadline">Deadline: 5 Agustus 2023</div>
+                    </div>
+                    <div class="competition-content">
+                        <div class="competition-tags">
+                            <span class="tag tag-business">Bisnis</span>
+                            <span class="tag tag-national">Nasional</span>
+                        </div>
+                        <h3>Mandiri Young Entrepreneur Competition 2023</h3>
+                        <p class="competition-organizer">Oleh: Bank Mandiri</p>
+                        <p class="competition-desc">Kompetisi rencana bisnis untuk mahasiswa dengan fokus pada inovasi dan keberlanjutan.</p>
+                        <div class="competition-prize">
+                            <i class="fas fa-trophy"></i>
+                            <span>Total Hadiah: Rp 300.000.000</span>
+                        </div>
+                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more-container">
+                <button class="view-more-btn">Lihat Lebih Banyak</button>
+            </div>
+        </section>
+
+        <!-- All Competitions -->
+        <section class="all-competitions">
+            <div class="section-header">
+                <h2>Semua Lomba</h2>
+                <p>Jelajahi berbagai kompetisi yang tersedia</p>
+            </div>
+            <div class="competitions-grid">
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="../assets/images/lomba-essay.jpg" alt="Essay Competition">
+                        <div class="competition-deadline">Deadline: 20 Juli 2023</div>
+                    </div>
+                    <div class="competition-content">
+                        <div class="competition-tags">
+                            <span class="tag tag-social">Sosial</span>
+                            <span class="tag tag-national">Nasional</span>
+                        </div>
+                        <h3>National Essay Competition 2023</h3>
+                        <p class="competition-organizer">Oleh: Universitas Indonesia</p>
+                        <p class="competition-desc">Kompetisi menulis esai dengan tema "Inovasi Sosial untuk Indonesia Maju".</p>
+                        <div class="competition-prize">
+                            <i class="fas fa-trophy"></i>
+                            <span>Total Hadiah: Rp 50.000.000</span>
+                        </div>
+                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="../assets/images/lomba-ui-ux.jpg" alt="UI/UX Competition">
+                        <div class="competition-deadline">Deadline: 10 Agustus 2023</div>
+                    </div>
+                    <div class="competition-content">
+                        <div class="competition-tags">
+                            <span class="tag tag-tech">Teknologi</span>
+                            <span class="tag tag-national">Nasional</span>
+                        </div>
+                        <h3>UI/UX Design Challenge 2023</h3>
+                        <p class="competition-organizer">Oleh: Tokopedia</p>
+                        <p class="competition-desc">Tantangan desain antarmuka pengguna untuk memecahkan masalah pengalaman pengguna di platform e-commerce.</p>
+                        <div class="competition-prize">
+                            <i class="fas fa-trophy"></i>
+                            <span>Total Hadiah: Rp 75.000.000</span>
+                        </div>
+                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="../assets/images/lomba-debat.jpg" alt="Debate Competition">
+                        <div class="competition-deadline">Deadline: 25 Juli 2023</div>
+                    </div>
+                    <div class="competition-content">
+                        <div class="competition-tags">
+                            <span class="tag tag-social">Sosial</span>
+                            <span class="tag tag-international">Internasional</span>
+                        </div>
+                        <h3>Asian Universities Debating Championship</h3>
+                        <p class="competition-organizer">Oleh: Asian Debate Council</p>
+                        <p class="competition-desc">Kompetisi debat bergengsi untuk mahasiswa universitas di seluruh Asia.</p>
+                        <div class="competition-prize">
+                            <i class="fas fa-trophy"></i>
+                            <span>Total Hadiah: $5,000</span>
+                        </div>
+                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="../assets/images/lomba-robotik.jpg" alt="Robotics Competition">
+                        <div class="competition-deadline">Deadline: 15 Agustus 2023</div>
+                    </div>
+                    <div class="competition-content">
+                        <div class="competition-tags">
+                            <span class="tag tag-tech">Teknologi</span>
+                            <span class="tag tag-national">Nasional</span>
+                        </div>
+                        <h3>Kontes Robot Indonesia 2023</h3>
+                        <p class="competition-organizer">Oleh: Kementerian Pendidikan dan Kebudayaan</p>
+                        <p class="competition-desc">Kompetisi robotika tingkat nasional untuk mahasiswa dengan berbagai kategori.</p>
+                        <div class="competition-prize">
+                            <i class="fas fa-trophy"></i>
+                            <span>Total Hadiah: Rp 250.000.000</span>
+                        </div>
+                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="../assets/images/lomba-fotografi.jpg" alt="Photography Competition">
+                        <div class="competition-deadline">Deadline: 30 Juli 2023</div>
+                    </div>
+                    <div class="competition-content">
+                        <div class="competition-tags">
+                            <span class="tag tag-art">Seni</span>
+                            <span class="tag tag-national">Nasional</span>
+                        </div>
+                        <h3>Indonesia Photography Awards 2023</h3>
+                        <p class="competition-organizer">Oleh: Canon Indonesia</p>
+                        <p class="competition-desc">Kompetisi fotografi dengan tema "Keindahan Alam dan Budaya Indonesia".</p>
+                        <div class="competition-prize">
+                            <i class="fas fa-trophy"></i>
+                            <span>Total Hadiah: Rp 100.000.000</span>
+                        </div>
+                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="../assets/images/lomba-hackathon.jpg" alt="Hackathon">
+                        <div class="competition-deadline">Deadline: 5 Agustus 2023</div>
+                    </div>
+                    <div class="competition-content">
+                        <div class="competition-tags">
+                            <span class="tag tag-tech">Teknologi</span>
+                            <span class="tag tag-international">Internasional</span>
+                        </div>
+                        <h3>Global Hackathon 2023: Sustainable Tech</h3>
+                        <p class="competition-organizer">Oleh: Google Developer Group</p>
+                        <p class="competition-desc">Hackathon 48 jam untuk mengembangkan solusi teknologi berkelanjutan untuk masalah global.</p>
+                        <div class="competition-prize">
+                            <i class="fas fa-trophy"></i>
+                            <span>Total Hadiah: $15,000</span>
+                        </div>
+                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="#" class="pagination-prev disabled"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="pagination-number active">1</a>
+                <a href="#" class="pagination-number">2</a>
+                <a href="#" class="pagination-number">3</a>
+                <span class="pagination-dots">...</span>
+                <a href="#" class="pagination-number">10</a>
+                <a href="#" class="pagination-next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h2>Dapatkan Informasi Lomba Terbaru</h2>
+                    <p>Berlangganan newsletter kami untuk mendapatkan update tentang lomba-lomba terbaru yang sesuai dengan minatmu</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Masukkan email kamu" class="newsletter-input">
+                        <button class="newsletter-button">Berlangganan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3 class="section-title">TENTANG</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Tentang Kami</a>
+                        <a href="#" class="footer-link">FAQ</a>
+                        <a href="#" class="footer-link">Kebijakan Privasi</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="section-title">LAINNYA</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Beasiswa</a>
+                        <a href="#" class="footer-link">Lomba</a>
+                        <a href="#" class="footer-link">Cari Tim</a>
+                        <a href="#" class="footer-link">Forum</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="section-title">IKUTI KAMI</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="section-title">HUBUNGI KAMI</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@luarkampus.id</p>
+                        <p><i class="fas fa-phone"></i> +62 812 3456 7890</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2025 Luarkampus. All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+>>>>>>> 186c9a918a636f2f7aa8d1ce7d69af0ade3580d5
 </html>
