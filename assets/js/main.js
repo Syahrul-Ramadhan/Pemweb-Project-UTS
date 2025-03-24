@@ -48,3 +48,49 @@ window.addEventListener("resize", () => {
 
 // Panggil event sekali saat halaman dimuat untuk menyesuaikan kondisi awal
 window.dispatchEvent(new Event("resize"));
+
+document.addEventListener("DOMContentLoaded", function () {
+  const profileContainer = document.getElementById("profile-section");
+  const authBtn = document.querySelector(".auth-buttons");
+  const logoutBtn = document.getElementById("logout");
+  const authResp = document.querySelectorAll(".auth-resp");
+  const dropdownMenu = document.querySelector(".dropdown-profile");
+  const profileBtn = document.querySelector(".profile-btn");
+
+  const isLoggedIn = localStorage.getItem("status");
+
+  if (isLoggedIn === "true") {
+    // Tampilkan profil jika sudah login
+    if (profileContainer) profileContainer.style.display = "block";
+    if (authBtn) authBtn.style.display = "none";
+    authResp.forEach((el) => (el.style.display = "none"));
+  }
+
+  // Dropdown menu profile
+  if (profileBtn && dropdownMenu) {
+    profileBtn.addEventListener("click", function () {
+      dropdownMenu.classList.toggle("show"); // Gunakan toggle class agar bisa ditutup
+    });
+  }
+
+  // Klik di luar dropdown untuk menutupnya
+  document.addEventListener("click", function (e) {
+    if (
+      dropdownMenu &&
+      !profileBtn.contains(e.target) &&
+      !dropdownMenu.contains(e.target)
+    ) {
+      dropdownMenu.classList.remove("show");
+    }
+  });
+
+  // Logout function
+  logoutBtn.addEventListener("click", function () {
+    localStorage.setItem("status", "false");
+
+    // Redirect ke login
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 500);
+  });
+});

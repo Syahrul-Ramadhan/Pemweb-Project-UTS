@@ -10,11 +10,7 @@
       href="../assets/img/icons/forum_beasiswa.png"
     />
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/auth.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="../assets/css/forum.css" />
   </head>
   <body>
     <!-- NAVBAR START -->
@@ -115,79 +111,156 @@
     </nav>
     <!-- NAVBAR END -->
 
-    <main class="main-content">
-      <div class="registration-container">
-        <div class="form-section">
-          <div class="form-header">
-            <h1>Selamat Datang Kembali!</h1>
-            <p>
-              Selamat datang kembali di Luarkampus! Yuk masuk ke akun kamu agar
-              bisa menggunakan fitur lengkap kami dan mendapatkan update
-              informasi terbaru.
-            </p>
-          </div>
-
-          <form id="login-form" class="register-form">
-            <div class="input-fields">
-              <div class="input-field">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="Masukkan email"
-                  required
-                />
-              </div>
-              <div class="input-field">
-                <label for="password">Password</label>
-                <div class="password-container">
-                  <input
-                    type="password"
-                    id="password"
-                    placeholder="Masukkan password"
-                    required
-                  />
-                  <i class="fas fa-eye-slash toggle-password"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="remember-forgot">
-              <div class="terms-checkbox">
-                <input type="checkbox" id="remember" />
-                <label for="remember">Ingat saya</label>
-              </div>
-              <a href="#" class="forgot-password">Lupa password?</a>
-            </div>
-
-            <div class="button-group">
-              <button type="submit" class="register-btn">MASUK</button>
-              <div class="divider">
-                <span>atau</span>
-              </div>
-              <button type="button" class="google-btn">
-                <img src="../assets/images/google-icon.png" alt="Google" />
-                <span>MASUK DENGAN GOOGLE</span>
-              </button>
-            </div>
-          </form>
-
-          <div class="login-link">
-            <span>Belum punya akun?</span>
-            <a href="register.html">Daftar di sini</a>
-          </div>
-        </div>
-        <div class="image-section">
-          <div class="image-content">
-            <h2>Akses Semua Fitur Luarkampus</h2>
-            <p>
-              Dapatkan informasi terbaru tentang beasiswa, lomba, dan temukan
-              kolaborator untuk proyekmu.
-            </p>
+    <!-- FORUM START -->
+    <div class="forum-container">
+      <div class="forum-header">
+        <div class="header-content">
+          <img src="../assets/img/icons/forum.png" alt="Forum image" />
+          <div class="tittle">
+            <h5>Selamat Datang di</h5>
+            <h4>Forum Samudra Prestasi</h4>
           </div>
         </div>
       </div>
-    </main>
+      <div class="forum-body">
+        <button
+          class="how-to btn-chat-forum"
+          href="forum-chat.html"
+          data-category="how-to"
+        >
+          Cara Menggunakan Forum
+        </button>
+        <div class="forum-content">
+          <div class="category-container">
+            <h5>Kategori</h5>
+            <div class="category-content">
+              <a
+                href="detailForum.html"
+                class="beasiswa-forum"
+                data-category="beasiswa"
+              >
+                <div class="tittle-forum">
+                  <h4>Beasiswa</h4>
+                  <span>10</span>
+                </div>
+                <div class="desc-forum">
+                  <img
+                    src="../assets/img/icons/forum_beasiswa.png"
+                    alt="Forum Beasiswa"
+                  />
+                  <p>
+                    Tanya, diskusikan, dan bagikan pengalaman tentang beasiswa
+                    yang tersedia!
+                  </p>
+                </div>
+              </a>
+              <a
+                href="detailForum.html"
+                class="lomba-forum"
+                data-category="lomba"
+              >
+                <div class="tittle-forum">
+                  <h4>Lomba</h4>
+                  <span>15</span>
+                </div>
+                <div class="desc-forum">
+                  <img
+                    src="../assets/img/icons/forum_lomba.png"
+                    alt="Forum Lomba"
+                  />
+                  <p>
+                    Bagikan pengalaman, cari rekomendasi, dan temukan peluang
+                    kompetisi yang sesuai!
+                  </p>
+                </div>
+              </a>
+              <a href="detailForum.html" class="tim-forum" data-category="tim">
+                <div class="tittle-forum">
+                  <h4>Cari Tim</h4>
+                  <span>25</span>
+                </div>
+                <div class="desc-forum">
+                  <img
+                    src="../assets/img/icons/forum_tim.png"
+                    alt="Forum Tim"
+                  />
+                  <p>
+                    Butuh tim untuk proyek, hackathon, atau startup? Posting di
+                    sini dan temukan rekan yang tepat!
+                  </p>
+                </div>
+              </a>
+              <a href="detailForum.html" class="faq-forum" data-category="faq">
+                <div class="tittle-forum">
+                  <h4>FAQs</h4>
+                  <span>35</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="recently-container">
+            <h5>Terbaru</h5>
+            <div class="recently-content">
+              <div class="question-items">
+                <span
+                  class="question btn-chat-forum"
+                  data-category="beasiswa-full-funded"
+                  >Apa saja beasiswa full funding untuk mahasiswa S1 di
+                  Indonesia?</span
+                >
+                <span class="date">10 Mar 2025</span>
+              </div>
+              <div class="question-items">
+                <span
+                  class="question btn-chat-forum"
+                  data-category="beasiswa-full-funded"
+                  >Apa saja beasiswa full funding untuk mahasiswa S1 di
+                  Indonesia?</span
+                >
+                <span class="date">10 Mar 2025</span>
+              </div>
+              <div class="question-items">
+                <span
+                  class="question btn-chat-forum"
+                  data-category="beasiswa-full-funded"
+                  >Apa saja beasiswa full funding untuk mahasiswa S1 di
+                  Indonesia?</span
+                >
+                <span class="date">10 Mar 2025</span>
+              </div>
+              <div class="question-items">
+                <span
+                  class="question btn-chat-forum"
+                  data-category="beasiswa-full-funded"
+                  >Apa saja beasiswa full funding untuk mahasiswa S1 di
+                  Indonesia?</span
+                >
+                <span class="date">10 Mar 2025</span>
+              </div>
+              <div class="question-items">
+                <span
+                  class="question btn-chat-forum"
+                  data-category="beasiswa-full-funded"
+                  >Apa saja beasiswa full funding untuk mahasiswa S1 di
+                  Indonesia?</span
+                >
+                <span class="date">10 Mar 2025</span>
+              </div>
+              <div class="question-items">
+                <span
+                  class="question btn-chat-forum"
+                  data-category="beasiswa-full-funded"
+                  >Apa saja beasiswa full funding untuk mahasiswa S1 di
+                  Indonesia?</span
+                >
+                <span class="date">10 Mar 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FORUM END -->
 
     <!-- FOOTER START -->
     <footer>
@@ -270,8 +343,8 @@
     </footer>
     <!-- FOOTER END -->
 
-    <!-- SCRIPT JS -->
+    <!-- Java Script -->
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/forum.js"></script>
   </body>
 </html>
