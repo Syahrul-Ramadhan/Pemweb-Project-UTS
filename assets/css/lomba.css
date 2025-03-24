@@ -117,51 +117,64 @@ ul {
 }
 /* ---------- MONTH SET END ---------- */
 
-/* ---------- BEASISWA LIST START ---------- */
+/* ---------- LOMBA LIST START ---------- */
 
-.beasiswa-container {
+.lomba-container {
   padding: 12px 0;
 }
 
-.beasiswa-container h3 {
+.lomba-container h3 {
   font-size: 20px;
 }
 
-.beasiswa-list {
+.lomba-list {
   display: flex;
-  flex-direction: column;
   margin: 12px 0 0;
-  gap: 18px;
-}
-/* ------- BEASISWA MD START ------- */
-
-.beasiswa-list .beasiswa-card-md {
-  display: flex;
-  background: var(--fill-color);
-  border-radius: 8px;
-  width: 100%;
-  overflow: hidden;
-  padding: 14px 8px;
-  flex: 0 0 auto;
-}
-
-.beasiswa-card-md .card-content {
-  display: flex;
-  gap: 6px;
-}
-
-.beasiswa-card-md .head-card {
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.beasiswa-card-md .degrees {
-  display: flex;
-  gap: 8px;
+.lomba-card .card-info {
+  position: relative;
+  display: inline-block;
 }
 
-.beasiswa-card-md .degree {
+.lomba-list .lomba-card {
+  display: flex;
+  background: var(--fill-color);
+  width: calc(50% - 10px);
+  overflow: hidden;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.degrees {
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.card-info img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center -30px;
+}
+
+.card-info::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.degree {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,60 +184,6 @@ ul {
   color: white;
   font-weight: bold;
   font-size: 12px;
-  border-radius: 50%;
-}
-
-.beasiswa-card-md .title {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.beasiswa-card-md .start-date,
-.beasiswa-card-md .deadline {
-  font-size: 12px;
-}
-
-.beasiswa-card-md .dates {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-/* ------- BEASISWA LG START ------- */
-
-.beasiswa-list .beasiswa-card {
-  display: none;
-  background: var(--fill-color);
-  border-radius: 8px;
-  width: 100%;
-  overflow: hidden;
-  padding: 16px 12px;
-  flex: 0 0 auto;
-}
-
-.card-info {
-  padding: 12px;
-  border-right: 2px solid #ddd;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-.degrees {
-  display: flex;
-  gap: 8px;
-}
-
-.degree {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 35px;
-  background: #4f959d;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
   border-radius: 50%;
 }
 
@@ -247,22 +206,33 @@ ul {
 
 .card-content {
   margin-left: 16px;
-  padding: 12px;
+  padding: 8px 4px;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.beasiswa-card .card-content .head-card {
+.lomba-card .card-content .head-card {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.beasiswa-card .title {
-  font-size: 18px;
+.lomba-card .title {
+  font-size: 16px;
   font-weight: bold;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.lomba-card .penyelenggara,
+.lomba-card .tingkat,
+.lomba-card .lokasi {
+  font-size: 12px;
 }
 
 .location {
@@ -270,9 +240,16 @@ ul {
   color: #666;
 }
 
-.beasiswa-card .bookmark {
+.foot-card {
   display: flex;
-  justify-content: end;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lomba-card .bookmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bookmark-btn {
@@ -289,51 +266,7 @@ ul {
 .bookmark-btn:hover {
   background: #ddd;
 }
-/* ---------- BEASISWA LIST END ---------- */
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.pagination-btn {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  background-color: white;
-  border: 1px solid #777776;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--base-font-color);
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.pagination-btn:hover {
-  background-color: #d5e6e7;
-  color: var(--Primary-color);
-  border-color: var(--Primary-color);
-}
-
-.pagination-btn.active {
-  background-color: var(--Primary-color);
-  color: white;
-  border-color: var(--Primary-color);
-}
-
-.pagination-btn.next {
-  width: auto;
-  padding: 0 12px;
-}
+/* ---------- LOMBA LIST END ---------- */
 
 /* ---------- MAIN END ---------- */
 
@@ -346,12 +279,8 @@ ul {
   .main-content {
     width: 100%;
   }
-
-  .beasiswa-list .beasiswa-card-md {
-    display: none;
-  }
-  .beasiswa-list .beasiswa-card {
-    display: flex;
+  .lomba-list .lomba-card {
+    width: calc(33.33% - 10px);
   }
 }
 @media (min-width: 1280px) {

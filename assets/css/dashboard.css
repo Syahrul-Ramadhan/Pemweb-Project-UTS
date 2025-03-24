@@ -6,7 +6,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", Verdana, sans-serif;
-  color: var(--base-font-color);
 }
 
 body {
@@ -30,119 +29,85 @@ ul {
   --second-font-color: #777776;
 }
 
-/* ---------- MAIN START ---------- */
-.main-container {
-  margin: 60px auto;
-  display: flex;
-  gap: 12px;
-  width: 100%;
-}
-
-/* ---------- MAIN CONTENT START ---------- */
-.main-content {
+/* ---------- DASHBOARD ---------- */
+.dashboard-header {
+  background-color: var(--Primary-color);
+  color: white;
+  padding: 30px 30px 8px 30px;
   display: flex;
   flex-direction: column;
-  margin: 0 24px;
-  max-width: 100%;
-  overflow: hidden;
-}
-/* ---------- MAIN CONTENT END ---------- */
-
-/* ---------- YEAR SET START ---------- */
-.year-container {
-  display: flex;
   gap: 24px;
 }
 
-.year-container h1 {
-  font-weight: 600;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
+.dashboard-header h2 {
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.arrow-btn {
-  display: flex;
-}
-
-.arrow-btn .prev-btn,
-.arrow-btn .next-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-.arrow-btn .prev-btn:hover,
-.arrow-btn .next-btn:hover {
-  background-color: #ddd;
-}
-/* ---------- YEAR SET END ---------- */
-
-/* ---------- MONTH SET START ---------- */
-.month-container {
-  width: 100%;
-  padding: 12px 0;
-}
-
-.month-container .month-list {
+.dashboard-header .dashboard-links {
   display: flex;
   gap: 12px;
 }
 
-.month-container .month-list li {
-  background-color: var(--fill-color);
-  padding: 8px 16px;
+.dashboard-header .dashboard-links a {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dashboard-header .dashboard-links a.active {
+  border-bottom: 4px solid rgb(60, 148, 230);
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-sidebar {
+  margin: 30px;
+  width: 400px;
+}
+
+.dashboard-sidebar ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dashboard-sidebar ul li {
+  padding: 12px;
+  cursor: pointer;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
-  font-size: 16px;
-  color: var(--Primary-color);
+  width: 100%;
 }
 
-.month-container .month-list li:hover,
-.month-container .month-list li .active {
-  background-color: var(--Primary-color);
-  color: white;
-}
-/* ---------- MONTH SET END ---------- */
-
-/* ---------- BEASISWA LIST START ---------- */
-
-.beasiswa-container {
-  padding: 12px 0;
-}
-
-.beasiswa-container h3 {
-  font-size: 20px;
+.dashboard-sidebar ul li.active {
+  background-color: var(--fill-color);
+  border-left: solid 8px #205781;
 }
 
 .beasiswa-list {
+  margin: 30px 12px;
+  gap: 12px;
   display: flex;
   flex-direction: column;
-  margin: 12px 0 0;
-  gap: 18px;
+  align-content: stretch;
+  flex-wrap: wrap;
 }
+
 /* ------- BEASISWA MD START ------- */
 
 .beasiswa-list .beasiswa-card-md {
   display: flex;
   background: var(--fill-color);
   border-radius: 8px;
-  width: 100%;
-  overflow: hidden;
   padding: 14px 8px;
-  flex: 0 0 auto;
+  width: 100%;
+  flex: 1 1 auto;
 }
 
 .beasiswa-card-md .card-content {
@@ -196,10 +161,10 @@ ul {
   display: none;
   background: var(--fill-color);
   border-radius: 8px;
-  width: 100%;
   overflow: hidden;
   padding: 16px 12px;
-  flex: 0 0 auto;
+  width: 900px;
+  flex: 1 1 auto;
 }
 
 .card-info {
@@ -289,73 +254,136 @@ ul {
 .bookmark-btn:hover {
   background: #ddd;
 }
-/* ---------- BEASISWA LIST END ---------- */
 
-.pagination {
+/* ---------- TEAM LIST START ---------- */
+
+.team-list {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 20px;
+  margin: 24px 12px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.pagination-btn {
-  width: 32px;
-  height: 32px;
+.card-fteam {
+  background-color: var(--fill-color);
+  padding: 20px;
+  align-items: center;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  flex: 1 1 300px;
+}
+
+.card-fteam .head-card {
+  padding: 12px;
+  border-bottom: 2px solid #999998;
+}
+
+.head-card h3 {
+  font-size: 16px;
+}
+.head-card p,
+.info-uni span {
+  font-size: 12px;
+}
+
+.head-card .info-uni {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  background-color: white;
-  border: 1px solid #777776;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--base-font-color);
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  cursor: pointer;
+  gap: 12px;
+  margin-top: 8px;
 }
 
-.pagination-btn:hover {
-  background-color: #d5e6e7;
-  color: var(--Primary-color);
-  border-color: var(--Primary-color);
-}
-
-.pagination-btn.active {
-  background-color: var(--Primary-color);
-  color: white;
-  border-color: var(--Primary-color);
-}
-
-.pagination-btn.next {
-  width: auto;
+.card-fteam .body-card {
+  margin: 12px 0;
   padding: 0 12px;
 }
 
-/* ---------- MAIN END ---------- */
+.card-fteam .body-card p {
+  font-size: 12px;
+}
 
-/* ---------- RESPONSIVE ---------- */
+.card-fteam .foot-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.foot-card .profile-team {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 12px;
+}
+
+.foot-card .profile-team img {
+  width: 35px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.profile-team .detail-info {
+  display: flex;
+  flex-direction: column;
+}
+.detail-info .team-name {
+  font-size: 12px;
+  font-weight: 700;
+}
+.detail-info .date-team {
+  font-weight: 500;
+  font-size: 12px;
+}
+.foot-card .card-btn {
+  padding: 12px;
+  font-size: 12px;
+  background-color: var(--Primary-color);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  color: white;
+  cursor: pointer;
+}
+
+.foot-card .card-btn:hover {
+  background-color: #1a4667;
+}
+/* ---------- TEAM LIST END ---------- */
+
 @media (min-width: 640px) {
+  .content-section {
+    flex-direction: row;
+  }
 }
 @media (min-width: 768px) {
 }
 @media (min-width: 1080px) {
-  .main-content {
-    width: 100%;
-  }
-
   .beasiswa-list .beasiswa-card-md {
     display: none;
   }
   .beasiswa-list .beasiswa-card {
     display: flex;
   }
+
+  .dashboard-sidebar {
+    width: 300px;
+  }
+  .dashboard-header .dashboard-links {
+    gap: 40px;
+  }
+
+  .dashboard-header .dashboard-links a {
+    font-size: 16px;
+  }
 }
 @media (min-width: 1280px) {
-  .main-content {
-    width: 70%;
-  }
 }

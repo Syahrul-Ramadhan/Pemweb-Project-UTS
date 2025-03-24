@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cari Lomba</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/detailLomba.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lomba | Luarkampus</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
->>>>>>> 186c9a918a636f2f7aa8d1ce7d69af0ade3580d5
     <!-- NAVBAR START -->
     <nav class="navbar">
       <div class="nav-responsive">
@@ -26,39 +19,34 @@
           <span></span>
         </div>
         <div class="logo">
-          <a href="#">SaPres</a>
+          <a href="home.html">SaPres</a>
         </div>
       </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 186c9a918a636f2f7aa8d1ce7d69af0ade3580d5
       <div class="nav-content">
         <div class="menu-responsive">
           <ul>
-            <li><a href="#">Beasiswa</a></li>
-            <li><a href="#">Lomba</a></li>
-            <li><a href="#">Cari Tim</a></li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="login.html">MASUK</a></li>
+            <li><a href="beasiswa.html">Beasiswa</a></li>
+            <li><a href="lomba.html">Lomba</a></li>
+            <li><a href="cariTim.html">Cari Tim</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="login.html" class="auth-resp">MASUK</a></li>
             <li>
-<<<<<<< HEAD
-              <a href="register.html" class="btn-register register-responsive"
+              <a
+                href="register.html"
+                class="btn-register register-responsive auth-resp"
                 >DAFTAR</a
               >
-=======
-              <a href="register.html" class="btn-register register-responsive">DAFTAR</a>
->>>>>>> 186c9a918a636f2f7aa8d1ce7d69af0ade3580d5
             </li>
           </ul>
         </div>
         <div class="close-nav"></div>
         <div class="nav-menu">
           <ul class="nav-list">
-            <li><a href="#">Beasiswa</a></li>
-            <li><a href="#">Lomba</a></li>
-            <li><a href="#">Cari Tim</a></li>
-            <li><a href="#">Forum</a></li>
+            <li><a href="beasiswa.html">Beasiswa</a></li>
+            <li><a href="lomba.html">Lomba</a></li>
+            <li><a href="cariTim.html">Cari Tim</a></li>
+            <li><a href="forum.html">Forum</a></li>
           </ul>
         </div>
       </div>
@@ -71,383 +59,590 @@
         </div>
         <div class="search-btn">Cari</div>
       </div>
-      <div class="search-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-          color="#333332"
-          fill="none"
+      <div class="nav-item">
+        <div class="search-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            color="#333332"
+            fill="none"
+          >
+            <path
+              d="M17.5 17.5L22 22"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          class="profile-container"
+          id="profile-section"
+          style="display: none"
         >
-          <path
-            d="M17.5 17.5L22 22"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <div class="profile-btn">
+            <img
+              src="../assets/img/user_profile/user_profile.png"
+              alt="User Profile"
+            />
+            <div class="dropdown-profile">
+              <a href="dashboard.html">Dashboard</a>
+              <a id="logout">Keluar</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="auth-buttons">
-        <button class="btn btn-login">MASUK</button>
-        <button class="btn btn-register">DAFTAR</button>
+        <a href="login.html"><button class="btn btn-login">MASUK</button></a>
+        <a href="register.html"
+          ><button class="btn btn-register">DAFTAR</button></a
+        >
       </div>
     </nav>
     <!-- NAVBAR END -->
 
-<<<<<<< HEAD
+    <!-- DAFTAR LOMBA START -->
+    <main class="main-content">
+      <div class="page-title">
+        <h1>Lomba</h1>
+        <p>Temukan berbagai lomba sesuai dengan minat dan bakatmu</p>
+      </div>
+
+      <div class="content-wrapper">
+        <aside class="filter-sidebar">
+          <div class="filter-header">
+            <i class="fas fa-filter filter-icon"></i>
+            <h2>Filter</h2>
+            <button class="filter-toggle" aria-label="Toggle filter">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <div class="filter-content">
+            <div class="filter-section jenjang-section">
+              <div class="section-header">
+                <h3>Jenjang</h3>
+              </div>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="smp" />
+                  <label for="smp">SMP</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="sma" />
+                  <label for="sma">SMA</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="d3" />
+                  <label for="d3">D3</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="d4" />
+                  <label for="d4">D4</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="s1" checked />
+                  <label for="s1">S1</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="s2" />
+                  <label for="s2">S2</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="s3" />
+                  <label for="s3">S3</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="non-degree" />
+                  <label for="non-degree">Non-Degree</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-section skala-section">
+              <div class="section-header">
+                <h3>Skala Lomba</h3>
+              </div>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="nasional" checked />
+                  <label for="nasional">Nasional</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="internasional" />
+                  <label for="internasional">Internasional</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-section bidang-section">
+              <div class="section-header">
+                <h3>Bidang Lomba</h3>
+              </div>
+              <div class="search-box bidang-search">
+                <input type="text" placeholder="Cari Bidang" />
+              </div>
+              <div class="popular-tags">
+                <span class="tag">Bisnis</span>
+                <span class="tag">Teknologi</span>
+                <span class="tag">Sains</span>
+                <span class="tag">Seni</span>
+              </div>
+            </div>
+
+            <div class="filter-actions">
+              <button class="btn-reset">Reset Filter</button>
+              <button class="btn-apply">Terapkan</button>
+            </div>
+          </div>
+        </aside>
+
+        <div class="content-area">
+          <div class="month-selector-container">
+            <h2 class="section-title">Pilih Bulan</h2>
+            <div class="month-selector">
+              <div class="month-button">
+                <span>Jan</span>
+              </div>
+              <div class="month-button">
+                <span>Feb</span>
+              </div>
+              <div class="month-button active">
+                <span>Mar</span>
+              </div>
+              <div class="month-button">
+                <span>Apr</span>
+              </div>
+              <div class="month-button">
+                <span>Mei</span>
+              </div>
+              <div class="month-button">
+                <span>Jun</span>
+              </div>
+              <div class="month-button">
+                <span>Jul</span>
+              </div>
+              <div class="month-button">
+                <span>Agu</span>
+              </div>
+              <div class="month-button">
+                <span>Sep</span>
+              </div>
+              <div class="month-button">
+                <span>Okt</span>
+              </div>
+              <div class="month-button">
+                <span>Nov</span>
+              </div>
+              <div class="month-button">
+                <span>Des</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="competition-container">
+            <div class="competition-header">
+              <h2 class="section-title">Lomba Bulan Maret</h2>
+              <div class="competition-sort">
+                <label for="sort-by">Urutkan:</label>
+                <select id="sort-by" class="sort-select">
+                  <option value="deadline">Deadline Terdekat</option>
+                  <option value="newest">Terbaru</option>
+                  <option value="popular">Terpopuler</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="competition-grid">
+              <!-- Card 1 -->
+              <div class="competition-card">
+                <div class="card-image">
+                  <img
+                    src="../assets/img/lomba/BCC-IYREF 2025.jpg"
+                    alt="Competition"
+                  />
+                  <div class="card-badge">Populer</div>
+                </div>
+                <div class="card-content">
+                  <h3>Business Case Competition IYREF 2025 by SRE ITB</h3>
+                  <div class="organizer">
+                    <p><i class="fas fa-building"></i> SRE ITB</p>
+                    <p><i class="fas fa-globe"></i> Tingkat Nasional</p>
+                    <p>
+                      <i class="fas fa-graduation-cap"></i> untuk D3, D4, S1
+                    </p>
+                  </div>
+                  <div class="date-bookmark">
+                    <div class="dates">
+                      <p>
+                        <i class="far fa-calendar-alt"></i> Mulai: 06 Maret 2025
+                      </p>
+                      <p class="deadline">
+                        <i class="fas fa-clock"></i> Deadline: 23 Maret 2025
+                      </p>
+                    </div>
+                    <button class="bookmark-btn" aria-label="Bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <a href="lomba-detail.html" class="card-link"></a>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="competition-card">
+                <div class="card-image">
+                  <img
+                    src="../assets/img/lomba/BCC-IYREF 2025.jpg"
+                    alt="Competition"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>UI/UX Design Competition 2025 by Telkom University</h3>
+                  <div class="organizer">
+                    <p><i class="fas fa-building"></i> Telkom University</p>
+                    <p><i class="fas fa-globe"></i> Tingkat Nasional</p>
+                    <p>
+                      <i class="fas fa-graduation-cap"></i> untuk D3, D4, S1
+                    </p>
+                  </div>
+                  <div class="date-bookmark">
+                    <div class="dates">
+                      <p>
+                        <i class="far fa-calendar-alt"></i> Mulai: 10 Maret 2025
+                      </p>
+                      <p class="deadline">
+                        <i class="fas fa-clock"></i> Deadline: 25 Maret 2025
+                      </p>
+                    </div>
+                    <button
+                      class="bookmark-btn bookmarked"
+                      aria-label="Bookmark"
+                    >
+                      <i class="fas fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="card-link"></a>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="competition-card">
+                <div class="card-image">
+                  <img
+                    src="../assets/img/lomba/BCC-IYREF 2025.jpg"
+                    alt="Competition"
+                  />
+                  <div class="card-badge">Baru</div>
+                </div>
+                <div class="card-content">
+                  <h3>Data Science Challenge 2025 by Universitas Indonesia</h3>
+                  <div class="organizer">
+                    <p><i class="fas fa-building"></i> Universitas Indonesia</p>
+                    <p><i class="fas fa-globe"></i> Tingkat Nasional</p>
+                    <p>
+                      <i class="fas fa-graduation-cap"></i> untuk D3, D4, S1
+                    </p>
+                  </div>
+                  <div class="date-bookmark">
+                    <div class="dates">
+                      <p>
+                        <i class="far fa-calendar-alt"></i> Mulai: 15 Maret 2025
+                      </p>
+                      <p class="deadline">
+                        <i class="fas fa-clock"></i> Deadline: 30 Maret 2025
+                      </p>
+                    </div>
+                    <button class="bookmark-btn" aria-label="Bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="card-link"></a>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="competition-card">
+                <div class="card-image">
+                  <img
+                    src="../assets/img/lomba/BCC-IYREF 2025.jpg"
+                    alt="Competition"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>Hackathon Nasional 2025 by Dicoding</h3>
+                  <div class="organizer">
+                    <p><i class="fas fa-building"></i> Dicoding Indonesia</p>
+                    <p><i class="fas fa-globe"></i> Tingkat Nasional</p>
+                    <p>
+                      <i class="fas fa-graduation-cap"></i> untuk D3, D4, S1
+                    </p>
+                  </div>
+                  <div class="date-bookmark">
+                    <div class="dates">
+                      <p>
+                        <i class="far fa-calendar-alt"></i> Mulai: 20 Maret 2025
+                      </p>
+                      <p class="deadline">
+                        <i class="fas fa-clock"></i> Deadline: 05 April 2025
+                      </p>
+                    </div>
+                    <button class="bookmark-btn" aria-label="Bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="card-link"></a>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="competition-card">
+                <div class="card-image">
+                  <img
+                    src="../assets/img/lomba/BCC-IYREF 2025.jpg"
+                    alt="Competition"
+                  />
+                  <div class="card-badge">Populer</div>
+                </div>
+                <div class="card-content">
+                  <h3>
+                    Mobile App Development Competition by Google Developer
+                  </h3>
+                  <div class="organizer">
+                    <p><i class="fas fa-building"></i> Google Developer</p>
+                    <p><i class="fas fa-globe"></i> Tingkat Nasional</p>
+                    <p>
+                      <i class="fas fa-graduation-cap"></i> untuk D3, D4, S1
+                    </p>
+                  </div>
+                  <div class="date-bookmark">
+                    <div class="dates">
+                      <p>
+                        <i class="far fa-calendar-alt"></i> Mulai: 12 Maret 2025
+                      </p>
+                      <p class="deadline">
+                        <i class="fas fa-clock"></i> Deadline: 28 Maret 2025
+                      </p>
+                    </div>
+                    <button class="bookmark-btn" aria-label="Bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="card-link"></a>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="competition-card">
+                <div class="card-image">
+                  <img
+                    src="../assets/img/lomba/BCC-IYREF 2025.jpg"
+                    alt="Competition"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>Competitive Programming Contest by ICPC</h3>
+                  <div class="organizer">
+                    <p><i class="fas fa-building"></i> ICPC Foundation</p>
+                    <p><i class="fas fa-globe"></i> Tingkat Nasional</p>
+                    <p>
+                      <i class="fas fa-graduation-cap"></i> untuk D3, D4, S1
+                    </p>
+                  </div>
+                  <div class="date-bookmark">
+                    <div class="dates">
+                      <p>
+                        <i class="far fa-calendar-alt"></i> Mulai: 18 Maret 2025
+                      </p>
+                      <p class="deadline">
+                        <i class="fas fa-clock"></i> Deadline: 02 April 2025
+                      </p>
+                    </div>
+                    <button class="bookmark-btn" aria-label="Bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="card-link"></a>
+              </div>
+
+              <!-- Card 7 -->
+              <div class="competition-card">
+                <div class="card-image">
+                  <img
+                    src="../assets/img/lomba/BCC-IYREF 2025.jpg"
+                    alt="Competition"
+                  />
+                  <div class="card-badge">Baru</div>
+                </div>
+                <div class="card-content">
+                  <h3>IoT Innovation Challenge 2025 by Schneider Electric</h3>
+                  <div class="organizer">
+                    <p><i class="fas fa-building"></i> Schneider Electric</p>
+                    <p><i class="fas fa-globe"></i> Tingkat Nasional</p>
+                    <p>
+                      <i class="fas fa-graduation-cap"></i> untuk D3, D4, S1
+                    </p>
+                  </div>
+                  <div class="date-bookmark">
+                    <div class="dates">
+                      <p>
+                        <i class="far fa-calendar-alt"></i> Mulai: 22 Maret 2025
+                      </p>
+                      <p class="deadline">
+                        <i class="fas fa-clock"></i> Deadline: 10 April 2025
+                      </p>
+                    </div>
+                    <button class="bookmark-btn" aria-label="Bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="card-link"></a>
+              </div>
+
+              <!-- Card 8 -->
+              <div class="competition-card">
+                <div class="card-image">
+                  <img
+                    src="../assets/img/lomba/BCC-IYREF 2025.jpg"
+                    alt="Competition"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>
+                    Artificial Intelligence Competition by Microsoft Indonesia
+                  </h3>
+                  <div class="organizer">
+                    <p><i class="fas fa-building"></i> Microsoft Indonesia</p>
+                    <p><i class="fas fa-globe"></i> Tingkat Nasional</p>
+                    <p>
+                      <i class="fas fa-graduation-cap"></i> untuk D3, D4, S1
+                    </p>
+                  </div>
+                  <div class="date-bookmark">
+                    <div class="dates">
+                      <p>
+                        <i class="far fa-calendar-alt"></i> Mulai: 25 Maret 2025
+                      </p>
+                      <p class="deadline">
+                        <i class="fas fa-clock"></i> Deadline: 15 April 2025
+                      </p>
+                    </div>
+                    <button class="bookmark-btn" aria-label="Bookmark">
+                      <i class="far fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="card-link"></a>
+              </div>
+            </div>
+
+            <div class="pagination">
+              <button class="pagination-btn active" data-page="1">1</button>
+              <button class="pagination-btn" data-page="2">2</button>
+              <button class="pagination-btn" data-page="3">3</button>
+              <button class="pagination-btn next" id="next-page">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- DAFTAR LOMBA END -->
+
+    <!-- FOOTER START -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <h3>TENTANG</h3>
+          <div class="footer-items">
+            <a href="">Tentang Kami</a>
+            <a href="">FAQ</a>
+            <a href="">Kebijakan Privasi</a>
+          </div>
+        </div>
+        <div class="footer-content">
+          <h3>LAINNYA</h3>
+          <div class="footer-items">
+            <a href="lomba.html">lomba</a>
+            <a href="lomba.html">Lomba</a>
+            <a href="cariTim.html">Cari Tim</a>
+            <a href="forum.html">Forum</a>
+          </div>
+        </div>
+        <div class="footer-content">
+          <h3>IKUTI KAMI</h3>
+          <div class="social-items">
+            <a href="https://www.instagram.com/" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#ffffff"
+                fill="none"
+              >
+                <path
+                  d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M17.5078 6.5L17.4988 6.5"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a href="http://www.youtube.com" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#ffffff"
+                fill="none"
+              >
+                <path
+                  d="M12 20.5C13.8097 20.5 15.5451 20.3212 17.1534 19.9934C19.1623 19.5839 20.1668 19.3791 21.0834 18.2006C22 17.0221 22 15.6693 22 12.9635V11.0365C22 8.33073 22 6.97787 21.0834 5.79937C20.1668 4.62088 19.1623 4.41613 17.1534 4.00662C15.5451 3.67877 13.8097 3.5 12 3.5C10.1903 3.5 8.45489 3.67877 6.84656 4.00662C4.83766 4.41613 3.83321 4.62088 2.9166 5.79937C2 6.97787 2 8.33073 2 11.0365V12.9635C2 15.6693 2 17.0221 2.9166 18.2006C3.83321 19.3791 4.83766 19.5839 6.84656 19.9934C8.45489 20.3212 10.1903 20.5 12 20.5Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M15.9621 12.3129C15.8137 12.9187 15.0241 13.3538 13.4449 14.2241C11.7272 15.1705 10.8684 15.6438 10.1728 15.4615C9.9372 15.3997 9.7202 15.2911 9.53799 15.1438C9 14.7089 9 13.8059 9 12C9 10.1941 9 9.29112 9.53799 8.85618C9.7202 8.70886 9.9372 8.60029 10.1728 8.53854C10.8684 8.35621 11.7272 8.82945 13.4449 9.77593C15.0241 10.6462 15.8137 11.0813 15.9621 11.6871C16.0126 11.8933 16.0126 12.1067 15.9621 12.3129Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p>&copy; 2025 by Hengker. All rights reserved.</p>
+    </footer>
+    <!-- FOOTER END -->
     <!-- Java Script -->
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/filter.js"></script>
   </body>
-=======
-    <main class="lomba-main">
-        <!-- Hero Section -->
-        <section class="lomba-hero">
-            <div class="lomba-hero-content">
-                <h1>Temukan Lomba Terbaik untuk Kembangkan Potensimu</h1>
-                <p>Raih prestasi dan pengalaman berharga melalui berbagai kompetisi nasional dan internasional</p>
-                <div class="lomba-search-container">
-                    <input type="text" placeholder="Cari lomba berdasarkan nama, kategori, atau penyelenggara" class="lomba-search-input">
-                    <button class="lomba-search-button">Cari Lomba</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Filter Section -->
-        <section class="lomba-filter">
-            <div class="filter-container">
-                <div class="filter-group">
-                    <label>Kategori</label>
-                    <select id="kategori-filter">
-                        <option value="">Semua Kategori</option>
-                        <option value="teknologi">Teknologi</option>
-                        <option value="bisnis">Bisnis</option>
-                        <option value="sains">Sains</option>
-                        <option value="sosial">Sosial</option>
-                        <option value="seni">Seni & Budaya</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Tingkat</label>
-                    <select id="tingkat-filter">
-                        <option value="">Semua Tingkat</option>
-                        <option value="nasional">Nasional</option>
-                        <option value="internasional">Internasional</option>
-                        <option value="regional">Regional</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Deadline</label>
-                    <select id="deadline-filter">
-                        <option value="">Semua Waktu</option>
-                        <option value="minggu">Minggu Ini</option>
-                        <option value="bulan">Bulan Ini</option>
-                        <option value="3bulan">3 Bulan Ke Depan</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Hadiah</label>
-                    <select id="hadiah-filter">
-                        <option value="">Semua Hadiah</option>
-                        <option value="uang">Uang Tunai</option>
-                        <option value="beasiswa">Beasiswa</option>
-                        <option value="magang">Magang</option>
-                    </select>
-                </div>
-                <button class="filter-reset">Reset Filter</button>
-            </div>
-        </section>
-
-        <!-- Featured Competitions -->
-        <section class="featured-competitions">
-            <div class="section-header">
-                <h2>Lomba Unggulan</h2>
-                <p>Kompetisi populer dengan hadiah menarik</p>
-            </div>
-            <div class="competitions-grid">
-                <div class="competition-card featured">
-                    <div class="competition-image">
-                        <img src="../assets/images/lomba-gemastik.jpg" alt="GEMASTIK">
-                        <div class="competition-deadline">Deadline: 30 Juni 2023</div>
-                    </div>
-                    <div class="competition-content">
-                        <div class="competition-tags">
-                            <span class="tag tag-tech">Teknologi</span>
-                            <span class="tag tag-national">Nasional</span>
-                        </div>
-                        <h3>GEMASTIK XV - Pagelaran Mahasiswa Nasional Bidang TIK</h3>
-                        <p class="competition-organizer">Oleh: Kementerian Pendidikan dan Kebudayaan</p>
-                        <p class="competition-desc">Kompetisi teknologi informasi dan komunikasi tingkat nasional untuk mahasiswa dengan berbagai kategori lomba.</p>
-                        <div class="competition-prize">
-                            <i class="fas fa-trophy"></i>
-                            <span>Total Hadiah: Rp 500.000.000</span>
-                        </div>
-                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <div class="competition-card">
-                    <div class="competition-image">
-                        <img src="../assets/images/lomba-data-science.jpg" alt="Data Science Competition">
-                        <div class="competition-deadline">Deadline: 15 Juli 2023</div>
-                    </div>
-                    <div class="competition-content">
-                        <div class="competition-tags">
-                            <span class="tag tag-tech">Teknologi</span>
-                            <span class="tag tag-international">Internasional</span>
-                        </div>
-                        <h3>Indonesia Data Science Competition 2023</h3>
-                        <p class="competition-organizer">Oleh: Kaggle & Telkom Indonesia</p>
-                        <p class="competition-desc">Kompetisi data science untuk mengembangkan solusi inovatif berbasis data untuk masalah sosial di Indonesia.</p>
-                        <div class="competition-prize">
-                            <i class="fas fa-trophy"></i>
-                            <span>Total Hadiah: $10,000</span>
-                        </div>
-                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <div class="competition-card">
-                    <div class="competition-image">
-                        <img src="../assets/images/lomba-bisnis.jpg" alt="Business Plan Competition">
-                        <div class="competition-deadline">Deadline: 5 Agustus 2023</div>
-                    </div>
-                    <div class="competition-content">
-                        <div class="competition-tags">
-                            <span class="tag tag-business">Bisnis</span>
-                            <span class="tag tag-national">Nasional</span>
-                        </div>
-                        <h3>Mandiri Young Entrepreneur Competition 2023</h3>
-                        <p class="competition-organizer">Oleh: Bank Mandiri</p>
-                        <p class="competition-desc">Kompetisi rencana bisnis untuk mahasiswa dengan fokus pada inovasi dan keberlanjutan.</p>
-                        <div class="competition-prize">
-                            <i class="fas fa-trophy"></i>
-                            <span>Total Hadiah: Rp 300.000.000</span>
-                        </div>
-                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="view-more-container">
-                <button class="view-more-btn">Lihat Lebih Banyak</button>
-            </div>
-        </section>
-
-        <!-- All Competitions -->
-        <section class="all-competitions">
-            <div class="section-header">
-                <h2>Semua Lomba</h2>
-                <p>Jelajahi berbagai kompetisi yang tersedia</p>
-            </div>
-            <div class="competitions-grid">
-                <div class="competition-card">
-                    <div class="competition-image">
-                        <img src="../assets/images/lomba-essay.jpg" alt="Essay Competition">
-                        <div class="competition-deadline">Deadline: 20 Juli 2023</div>
-                    </div>
-                    <div class="competition-content">
-                        <div class="competition-tags">
-                            <span class="tag tag-social">Sosial</span>
-                            <span class="tag tag-national">Nasional</span>
-                        </div>
-                        <h3>National Essay Competition 2023</h3>
-                        <p class="competition-organizer">Oleh: Universitas Indonesia</p>
-                        <p class="competition-desc">Kompetisi menulis esai dengan tema "Inovasi Sosial untuk Indonesia Maju".</p>
-                        <div class="competition-prize">
-                            <i class="fas fa-trophy"></i>
-                            <span>Total Hadiah: Rp 50.000.000</span>
-                        </div>
-                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <div class="competition-card">
-                    <div class="competition-image">
-                        <img src="../assets/images/lomba-ui-ux.jpg" alt="UI/UX Competition">
-                        <div class="competition-deadline">Deadline: 10 Agustus 2023</div>
-                    </div>
-                    <div class="competition-content">
-                        <div class="competition-tags">
-                            <span class="tag tag-tech">Teknologi</span>
-                            <span class="tag tag-national">Nasional</span>
-                        </div>
-                        <h3>UI/UX Design Challenge 2023</h3>
-                        <p class="competition-organizer">Oleh: Tokopedia</p>
-                        <p class="competition-desc">Tantangan desain antarmuka pengguna untuk memecahkan masalah pengalaman pengguna di platform e-commerce.</p>
-                        <div class="competition-prize">
-                            <i class="fas fa-trophy"></i>
-                            <span>Total Hadiah: Rp 75.000.000</span>
-                        </div>
-                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <div class="competition-card">
-                    <div class="competition-image">
-                        <img src="../assets/images/lomba-debat.jpg" alt="Debate Competition">
-                        <div class="competition-deadline">Deadline: 25 Juli 2023</div>
-                    </div>
-                    <div class="competition-content">
-                        <div class="competition-tags">
-                            <span class="tag tag-social">Sosial</span>
-                            <span class="tag tag-international">Internasional</span>
-                        </div>
-                        <h3>Asian Universities Debating Championship</h3>
-                        <p class="competition-organizer">Oleh: Asian Debate Council</p>
-                        <p class="competition-desc">Kompetisi debat bergengsi untuk mahasiswa universitas di seluruh Asia.</p>
-                        <div class="competition-prize">
-                            <i class="fas fa-trophy"></i>
-                            <span>Total Hadiah: $5,000</span>
-                        </div>
-                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <div class="competition-card">
-                    <div class="competition-image">
-                        <img src="../assets/images/lomba-robotik.jpg" alt="Robotics Competition">
-                        <div class="competition-deadline">Deadline: 15 Agustus 2023</div>
-                    </div>
-                    <div class="competition-content">
-                        <div class="competition-tags">
-                            <span class="tag tag-tech">Teknologi</span>
-                            <span class="tag tag-national">Nasional</span>
-                        </div>
-                        <h3>Kontes Robot Indonesia 2023</h3>
-                        <p class="competition-organizer">Oleh: Kementerian Pendidikan dan Kebudayaan</p>
-                        <p class="competition-desc">Kompetisi robotika tingkat nasional untuk mahasiswa dengan berbagai kategori.</p>
-                        <div class="competition-prize">
-                            <i class="fas fa-trophy"></i>
-                            <span>Total Hadiah: Rp 250.000.000</span>
-                        </div>
-                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <div class="competition-card">
-                    <div class="competition-image">
-                        <img src="../assets/images/lomba-fotografi.jpg" alt="Photography Competition">
-                        <div class="competition-deadline">Deadline: 30 Juli 2023</div>
-                    </div>
-                    <div class="competition-content">
-                        <div class="competition-tags">
-                            <span class="tag tag-art">Seni</span>
-                            <span class="tag tag-national">Nasional</span>
-                        </div>
-                        <h3>Indonesia Photography Awards 2023</h3>
-                        <p class="competition-organizer">Oleh: Canon Indonesia</p>
-                        <p class="competition-desc">Kompetisi fotografi dengan tema "Keindahan Alam dan Budaya Indonesia".</p>
-                        <div class="competition-prize">
-                            <i class="fas fa-trophy"></i>
-                            <span>Total Hadiah: Rp 100.000.000</span>
-                        </div>
-                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <div class="competition-card">
-                    <div class="competition-image">
-                        <img src="../assets/images/lomba-hackathon.jpg" alt="Hackathon">
-                        <div class="competition-deadline">Deadline: 5 Agustus 2023</div>
-                    </div>
-                    <div class="competition-content">
-                        <div class="competition-tags">
-                            <span class="tag tag-tech">Teknologi</span>
-                            <span class="tag tag-international">Internasional</span>
-                        </div>
-                        <h3>Global Hackathon 2023: Sustainable Tech</h3>
-                        <p class="competition-organizer">Oleh: Google Developer Group</p>
-                        <p class="competition-desc">Hackathon 48 jam untuk mengembangkan solusi teknologi berkelanjutan untuk masalah global.</p>
-                        <div class="competition-prize">
-                            <i class="fas fa-trophy"></i>
-                            <span>Total Hadiah: $15,000</span>
-                        </div>
-                        <a href="lomba-detail.html" class="competition-detail-btn">Lihat Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="pagination">
-                <a href="#" class="pagination-prev disabled"><i class="fas fa-chevron-left"></i></a>
-                <a href="#" class="pagination-number active">1</a>
-                <a href="#" class="pagination-number">2</a>
-                <a href="#" class="pagination-number">3</a>
-                <span class="pagination-dots">...</span>
-                <a href="#" class="pagination-number">10</a>
-                <a href="#" class="pagination-next"><i class="fas fa-chevron-right"></i></a>
-            </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="newsletter-section">
-            <div class="newsletter-container">
-                <div class="newsletter-content">
-                    <h2>Dapatkan Informasi Lomba Terbaru</h2>
-                    <p>Berlangganan newsletter kami untuk mendapatkan update tentang lomba-lomba terbaru yang sesuai dengan minatmu</p>
-                    <div class="newsletter-form">
-                        <input type="email" placeholder="Masukkan email kamu" class="newsletter-input">
-                        <button class="newsletter-button">Berlangganan</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-sections">
-                <div class="footer-section">
-                    <h3 class="section-title">TENTANG</h3>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">Tentang Kami</a>
-                        <a href="#" class="footer-link">FAQ</a>
-                        <a href="#" class="footer-link">Kebijakan Privasi</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="section-title">LAINNYA</h3>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">Beasiswa</a>
-                        <a href="#" class="footer-link">Lomba</a>
-                        <a href="#" class="footer-link">Cari Tim</a>
-                        <a href="#" class="footer-link">Forum</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="section-title">IKUTI KAMI</h3>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="section-title">HUBUNGI KAMI</h3>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> info@luarkampus.id</p>
-                        <p><i class="fas fa-phone"></i> +62 812 3456 7890</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                © 2025 Luarkampus. All rights reserved
-            </div>
-        </div>
-    </footer>
-
-    <script src="../assets/js/main.js"></script>
-</body>
->>>>>>> 186c9a918a636f2f7aa8d1ce7d69af0ade3580d5
 </html>

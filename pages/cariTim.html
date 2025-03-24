@@ -15,7 +15,7 @@
           <span></span>
         </div>
         <div class="logo">
-          <a href="#">SaPres</a>
+          <a href="home.html">SaPres</a>
         </div>
       </div>
 
@@ -25,10 +25,12 @@
             <li><a href="beasiswa.html">Beasiswa</a></li>
             <li><a href="lomba.html">Lomba</a></li>
             <li><a href="cariTim.html">Cari Tim</a></li>
-            <li><a href="">Forum</a></li>
-            <li><a href="login.html">MASUK</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="login.html" class="auth-resp">MASUK</a></li>
             <li>
-              <a href="register.html" class="btn-register register-responsive"
+              <a
+                href="register.html"
+                class="btn-register register-responsive auth-resp"
                 >DAFTAR</a
               >
             </li>
@@ -40,7 +42,7 @@
             <li><a href="beasiswa.html">Beasiswa</a></li>
             <li><a href="lomba.html">Lomba</a></li>
             <li><a href="cariTim.html">Cari Tim</a></li>
-            <li><a href="#">Forum</a></li>
+            <li><a href="forum.html">Forum</a></li>
           </ul>
         </div>
       </div>
@@ -53,33 +55,53 @@
         </div>
         <div class="search-btn">Cari</div>
       </div>
-      <div class="search-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-          color="#333332"
-          fill="none"
+      <div class="nav-item">
+        <div class="search-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            color="#333332"
+            fill="none"
+          >
+            <path
+              d="M17.5 17.5L22 22"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          class="profile-container"
+          id="profile-section"
+          style="display: none"
         >
-          <path
-            d="M17.5 17.5L22 22"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <div class="profile-btn">
+            <img
+              src="../assets/img/user_profile/user_profile.png"
+              alt="User Profile"
+            />
+            <div class="dropdown-profile">
+              <a href="dashboard.html">Dashboard</a>
+              <a id="logout">Keluar</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="auth-buttons">
-        <button class="btn btn-login">MASUK</button>
-        <button class="btn btn-register">DAFTAR</button>
+        <a href="login.html"><button class="btn btn-login">MASUK</button></a>
+        <a href="register.html"
+          ><button class="btn btn-register">DAFTAR</button></a
+        >
       </div>
     </nav>
     <!-- NAVBAR END -->
@@ -896,6 +918,7 @@
         </div>
         <!-- DAFTAR TIM END -->
       </div>
+
       <!-- MAIN CONTENT END -->
     </div>
     <!-- MAIN END -->
@@ -971,9 +994,9 @@
           <h3>LAINNYA</h3>
           <div class="footer-items">
             <a href="beasiswa.html">Beasiswa</a>
-            <a href="">Lomba</a>
+            <a href="lomba.html">Lomba</a>
             <a href="cariTim.html">Cari Tim</a>
-            <a href="">Forum</a>
+            <a href="forum.html">Forum</a>
           </div>
         </div>
         <div class="footer-content">
@@ -1038,5 +1061,6 @@
     <!-- FOOTER END -->
     <!-- Java Script -->
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/filter.js"></script>
   </body>
 </html>

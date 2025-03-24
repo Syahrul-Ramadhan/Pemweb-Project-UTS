@@ -49,174 +49,48 @@ window.addEventListener("resize", () => {
 // Panggil event sekali saat halaman dimuat untuk menyesuaikan kondisi awal
 window.dispatchEvent(new Event("resize"));
 
-<<<<<<< HEAD
-// filter
-const filterWrap = document.querySelector(".filter-wrap-responsive");
-const filterBtn = document.querySelector(".filter-btn");
-const closeFilter = document.querySelector(".close-filter");
-// Buka Side Filter
-filterBtn.addEventListener("click", () => {
-  filterWrap.classList.add("active");
-  closeFilter.classList.add("active");
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const profileContainer = document.getElementById("profile-section");
+  const authBtn = document.querySelector(".auth-buttons");
+  const logoutBtn = document.getElementById("logout");
+  const authResp = document.querySelectorAll(".auth-resp");
+  const dropdownMenu = document.querySelector(".dropdown-profile");
+  const profileBtn = document.querySelector(".profile-btn");
 
-// Tutup Side Filter dengan Klik di Luar
-closeFilter.addEventListener("click", () => {
-  filterWrap.classList.remove("active");
-  closeFilter.classList.remove("active");
-});
+  const isLoggedIn = localStorage.getItem("status");
 
-// pop up cari tim
-
-const popUp = document.querySelector(".pop-up-container");
-const bgOverlay = document.querySelector(".background-pop-up");
-const closeBtn = document.querySelector(".close-pop-up-btn");
-const openBtn = document.querySelectorAll(".card-btn");
-const confirmBtn = document.querySelector(".confirm-btn");
-const notification = document.querySelector(".custom-notification");
-
-// Event listener untuk semua tombol card-btn
-openBtn.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    popUp.classList.add("active");
-    bgOverlay.classList.add("active");
-  });
-});
-
-// Event listener untuk tombol close
-closeBtn.addEventListener("click", () => {
-  popUp.classList.remove("active");
-  bgOverlay.classList.remove("active");
-});
-
-// Event listener untuk tombol confirm-btn
-confirmBtn.addEventListener("click", () => {
-  notification.classList.add("show");
-  // Hilangkan notifikasi setelah 3 detik
-  setTimeout(() => {
-    notification.classList.remove("show");
-  }, 3000);
-  popUp.classList.remove("active");
-  bgOverlay.classList.remove("active");
-});
-
-// Upload KTM
-const ktmUpload = document.getElementById("ktm-upload");
-const fileNameDisplay = document.getElementById("file-name");
-
-ktmUpload.addEventListener("change", function () {
-  if (this.files.length > 0) {
-    fileNameDisplay.textContent = this.files[0].name;
-  } else {
-    fileNameDisplay.textContent = "Tidak ada file dipilih";
+  if (isLoggedIn === "true") {
+    // Tampilkan profil jika sudah login
+    if (profileContainer) profileContainer.style.display = "block";
+    if (authBtn) authBtn.style.display = "none";
+    authResp.forEach((el) => (el.style.display = "none"));
   }
-=======
-// Halaman Lomba
 
-// Filter functionality
-document.querySelector('.filter-reset').addEventListener('click', function() {
-    const selects = document.querySelectorAll('.filter-group select');
-    selects.forEach(select => {
-        select.selectedIndex = 0;
+  // Dropdown menu profile
+  if (profileBtn && dropdownMenu) {
+    profileBtn.addEventListener("click", function () {
+      dropdownMenu.classList.toggle("show"); // Gunakan toggle class agar bisa ditutup
     });
-});
+  }
 
-// Search functionality
-document.querySelector('.lomba-search-button').addEventListener('click', function() {
-    const searchTerm = document.querySelector('.lomba-search-input').value.toLowerCase();
-    if (searchTerm) {
-        // In a real application, this would trigger a search request
-        alert('Mencari: ' + searchTerm);
+  // Klik di luar dropdown untuk menutupnya
+  document.addEventListener("click", function (e) {
+    if (
+      dropdownMenu &&
+      !profileBtn.contains(e.target) &&
+      !dropdownMenu.contains(e.target)
+    ) {
+      dropdownMenu.classList.remove("show");
     }
-});
+  });
 
-// View more button
-document.querySelector('.view-more-btn').addEventListener('click', function() {
-    // In a real application, this would load more competitions
-    alert('Memuat lebih banyak lomba...');
-});
+  // Logout function
+  logoutBtn.addEventListener("click", function () {
+    localStorage.setItem("status", "false");
 
-// Pagination
-document.querySelectorAll('.pagination-number').forEach(item => {
-    item.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelectorAll('.pagination-number').forEach(num => {
-            num.classList.remove('active');
-        });
-        this.classList.add('active');
-        // In a real application, this would load the corresponding page
-    });
-});
-
-// Newsletter subscription
-document.querySelector('.newsletter-button').addEventListener('click', function() {
-    const email = document.querySelector('.newsletter-input').value;
-    if (email && /^\S+@\S+\.\S+$/.test(email)) {
-        alert('Terima kasih telah berlangganan newsletter kami!');
-        document.querySelector('.newsletter-input').value = '';
-    } else {
-        alert('Mohon masukkan alamat email yang valid.');
-    }
-});
-
-// Halaman Detail Lomba
-
-
-// Tab switching functionality
-document.querySelectorAll('.tab-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        // Remove active class from all buttons and content
-        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-        
-        // Add active class to clicked button
-        this.classList.add('active');
-        
-        // Show corresponding content
-        const tabId = this.getAttribute('data-tab');
-        document.getElementById(tabId).classList.add('active');
-    });
-});
-
-// Bookmark functionality
-document.querySelector('.btn-bookmark').addEventListener('click', function() {
-    const icon = this.querySelector('i');
-    if (icon.classList.contains('far')) {
-        icon.classList.replace('far', 'fas');
-        alert('Lomba disimpan ke daftar favorit!');
-    } else {
-        icon.classList.replace('fas', 'far');
-        alert('Lomba dihapus dari daftar favorit!');
-    }
-});
-
-// Share functionality
-document.querySelector('.btn-share').addEventListener('click', function() {
-    if (navigator.share) {
-        navigator.share({
-            title: 'GEMASTIK XV - Pagelaran Mahasiswa Nasional Bidang TIK',
-            text: 'Cek lomba GEMASTIK XV dengan total hadiah Rp 500.000.000!',
-            url: window.location.href
-        })
-        .catch(error => console.log('Error sharing:', error));
-    } else {
-        alert('Bagikan link: ' + window.location.href);
-    }
-});
-
-// FAQ toggle
-document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', function() {
-        const answer = this.nextElementSibling;
-        const icon = this.querySelector('i');
-        
-        if (answer.style.maxHeight) {
-            answer.style.maxHeight = null;
-            icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-        } else {
-            answer.style.maxHeight = answer.scrollHeight + 'px';
-            icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-        }
-    });
->>>>>>> 186c9a918a636f2f7aa8d1ce7d69af0ade3580d5
+    // Redirect ke login
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 500);
+  });
 });
