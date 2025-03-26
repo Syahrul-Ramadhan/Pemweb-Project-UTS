@@ -108,16 +108,20 @@ ul {
   -o-border-radius: 12px;
   font-size: 16px;
   color: var(--Primary-color);
+  cursor: pointer;
 }
 
 .month-container .month-list li:hover,
-.month-container .month-list li .active {
+.month-container .month-list li.active {
   background-color: var(--Primary-color);
   color: white;
 }
 /* ---------- MONTH SET END ---------- */
 
 /* ---------- BEASISWA LIST START ---------- */
+.beasiswa-section {
+  width: 100%;
+}
 
 .beasiswa-container {
   padding: 12px 0;

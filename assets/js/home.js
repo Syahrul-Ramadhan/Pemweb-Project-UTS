@@ -62,3 +62,21 @@ document.addEventListener("DOMContentLoaded", function () {
     carouselLomba.scrollBy({ left: -scrollAmount, behavior: "smooth" });
   });
 });
+
+// Menangani klik tombol dan link Beasiswa
+document.querySelectorAll(".btn-detail-beasiswa").forEach((element) => {
+  element.addEventListener("click", function (event) {
+    const type = this.getAttribute("data-category"); // Ambil type dari tombol
+    if (type) {
+      localStorage.setItem("selectedType", type); // Simpan kategori di localStorage
+
+      // Jika elemen adalah <a>, navigasikan tanpa preventDefault
+      if (this.tagName.toLowerCase() === "a") {
+        return; // Biarkan <a> berjalan normal tanpa mengubah window.location
+      }
+
+      // Jika bukan <a>, navigasikan ke detailBeasiswa.html secara manual
+      window.location.href = "detailBeasiswa.html";
+    }
+  });
+});
