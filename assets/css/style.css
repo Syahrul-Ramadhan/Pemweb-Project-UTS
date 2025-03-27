@@ -622,6 +622,212 @@ ul {
 
 /* ---------- YEAR AND MONTH SET END ---------- */
 
+/* ---------- POP UP CARI TIM START ---------- */
+.pop-up-container {
+  display: none;
+  inset: 0;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.pop-up-content {
+  background-color: white;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 8px;
+  position: relative;
+  z-index: 30;
+  top: 40px;
+}
+
+.close-pop-up {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.close-pop-up .close-pop-up-btn {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border: solid 2px #fa4032;
+  padding: 6px;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.close-pop-up .close-pop-up-btn:hover {
+  background-color: #fa4032;
+  color: white;
+}
+
+.close-pop-up .close-pop-up-btn svg {
+  color: inherit;
+}
+.close-pop-up .close-pop-up-btn svg path {
+  color: inherit;
+}
+
+.pop-up-content img {
+  width: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.pop-up-content .detail-info-team {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+}
+
+.detail-info-team .title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.detail-info-team .lomba,
+.detail-info-team .univ {
+  font-size: 14px;
+}
+
+.req {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.req h4 {
+  font-weight: 600;
+  color: #777776;
+  margin-bottom: 4px;
+}
+
+.req ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.req ul li {
+  font-size: 14px;
+  background-color: var(--fill-color);
+  padding: 8px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.file-up {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 12px;
+}
+
+.upload-label {
+  display: inline-block;
+  background-color: var(--Primary-color);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#file-name {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #777;
+}
+
+.pop-up-content .confirm-btn {
+  right: 0;
+  padding: 12px;
+  color: white;
+  background-color: var(--Primary-color);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.background-pop-up {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  inset: 0;
+}
+
+.pop-up-container.active {
+  display: flex;
+}
+
+.background-pop-up.active {
+  display: block;
+}
+
+.custom-notification {
+  visibility: hidden;
+  position: fixed;
+  right: 0px;
+  z-index: 30;
+  top: 90px;
+  background-color: var(--Primary-color);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, transform 0.3s ease;
+  -moz-transition: opacity 0.3s ease, transform 0.3s ease;
+  -ms-transition: opacity 0.3s ease, transform 0.3s ease;
+  -o-transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.custom-notification.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ---------- POP UP CARI TIM END ---------- */
+
 /* ---------- FOOTER START---------- */
 footer {
   background-color: #13344d;
